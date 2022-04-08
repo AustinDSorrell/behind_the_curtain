@@ -1,9 +1,12 @@
+* {
+    font-family: monospace;
+}
+
 body {
     background-color: black;
 }
 
 h1 {
-    font-family: monospace;
     font-size: 65px;
     display: block;
     text-align: center;
@@ -12,7 +15,6 @@ h1 {
 }
 
 h2 {
-    font-family: monospace;
     display: block;
     text-align: center;
     color: white;
@@ -23,5 +25,18 @@ form {
     justify-content: center;
     display: flex;
     margin-top: 200px;
-    
 }
+
+button {
+    font-size: 1rem;
+    background-color: darkgray;
+}
+
+button:hover {
+    transition: .5s;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+
