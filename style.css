@@ -39,4 +39,7 @@ button:hover {
     color: white;
 }
 
-
+.behindName {
+    color: white;
+    font-size: 20px;
+}
