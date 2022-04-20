@@ -35,7 +35,17 @@ let behindSL = {
         text:behindPlayer.name+" decides to set the alarm"
     },
     fallAsleep:{
-        
+        text:behindPlayer.name+" tries to fall back asleep but is awoken to obnoxiously loud banging outside their window as well as loud cries from an unknown origin.",
+        options:[["Look out the window", "behindSL.lookOutWindow"], ["Scream", "behindSL.scream"]]
+    },
+    lookOutWindow:{
+        text: behindPlayer.name+" notices an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. " +behindPlayer.name+" is stunned by this horrifying sight. The creature breaks the window and strangles "+behindPlayer.name+" to death while demonic laughter in varying pitches echoes through their last memory.", 
+        options:[["restart"]]
+    },
+
+    scream:{
+        text:behindPlayer.name+"'s bedroom door swings open revealing a being of faded darkness all but a mischievous smile. The being then strangles "+behindPlayer.name+"to death while demonic laughter in varying pitches echoes through their last memory.",
+        options:[["restart"]]
     },
 
     getUp: {
