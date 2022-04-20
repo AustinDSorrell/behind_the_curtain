@@ -27,8 +27,7 @@ let behindSL = {
     },
 
     area1Open: {
-
-        text: "You are awoken to sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, You roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty. Time to get up...",
+        text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
         options: [["Get Up","behindSL.getUp"], ["Set Alarm", "behindSL.setAlarm"], ["Fall Asleep", "behindSL.fallAsleep"]],
     },
     setAlarm:{
@@ -55,14 +54,8 @@ let behindSL = {
 
 
     }
-
-
-
-
     
 ;
-
-
 
 //Story Page
 let behindPage = document.getElementById('enterName'),
