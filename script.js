@@ -28,7 +28,7 @@ let behindSL = {
 
     area1Open: {
         text: "You are awoken to sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, You roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty. Time to get up...",
-        options: [["Get Up","getUp"], ["Set Alarm", "setAlarm"], ["Fall Asleep", "Fall Asleep"]],
+        options: [["Get Up","getUp"], ["Set Alarm", "setAlarm"], ["Fall Asleep", "fallAsleep"]],
     },
 
 };
@@ -51,9 +51,9 @@ function nextArea(place) {
 
 //Construct function and other functions
 function behindNameConstruct(place) {
-    let message = '<p name ="playerName"></p><p>'+ place.text +'</p>'
+    let message = '<p name ="playerName"></p><p name = "behindStory">'+ place.text +'</p>'
     for (i = 0; i < place.options.length; i++) {
-        message += '<button type="submit" onclick="nextArea(' + place.options[i][1] + ')">' + place.options[i][0] + '</button>'
+        message += '<button name = behindOptions type="submit" onclick="nextArea(' + place.options[i][1] + ')">' + place.options[i][0] + '</button>'
     }
     for (i=0; i < message.length-6; i++) {
         if (message.substring(i,i+6)=="player") {
