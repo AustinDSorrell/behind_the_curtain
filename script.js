@@ -27,10 +27,9 @@ let behindSL = {
     },
 
     area1Open: {
-        text: "You are awoken to sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, You roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty. Time to get up...",
-        options: [["Get Up","getUp"], ["Set Alarm", "setAlarm"], ["Fall Asleep", "fallAsleep"]],
+        text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
+        options: [["Get Up","behindSL.getUp"], ["Set Alarm", "behindSL.setAlarm"], ["Fall Asleep", "behindSL.fallAsleep"]],
     },
-
 };
 
 //Story Page
@@ -51,13 +50,14 @@ function nextArea(place) {
 
 //Construct function and other functions
 function behindNameConstruct(place) {
-    let message = '<p name ="playerName"></p><p name = "behindStory">'+ place.text +'</p>'
+    let message = '<p name ="playerName"></p><p class = "behindStory">'+ place.text +'</p><ul>'
     for (i = 0; i < place.options.length; i++) {
-        message += '<button name = behindOptions type="submit" onclick="nextArea(' + place.options[i][1] + ')">' + place.options[i][0] + '</button>'
+        message += '<button class= behindOptions type="submit" onclick="nextArea(' + place.options[i][1] + ')">' + place.options[i][0] + '</button>'
     }
     for (i=0; i < message.length-6; i++) {
         if (message.substring(i,i+6)=="player") {
             message = message.replace("player", behindPlayer.name);
+            message +='<ul>'
         }
     }
     return message;
