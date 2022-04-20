@@ -24,7 +24,6 @@ form {
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 200px;
 }
 
 button {
@@ -41,5 +40,19 @@ button:hover {
 
 .behindName {
     color: white;
+    margin-top: 30px;
+}
+
+.behindStory {
     font-size: 20px;
+    margin-left: 165px;
+    margin-right: 150px;
+}
+
+.behindOptions {
+    margin-left: 126px;
+}
+
+ul {
+    
 }
