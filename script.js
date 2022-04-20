@@ -28,10 +28,34 @@ let behindSL = {
 
     area1Open: {
         text: "You are awoken to sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, You roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty. Time to get up...",
-        options: [["Get Up","getUp"], ["Set Alarm", "setAlarm"], ["Fall Asleep", "fallAsleep"]],
+        options: [["Get Up","behindSL.getUp"], ["Set Alarm", "behindSL.setAlarm"], ["Fall Asleep", "behindSL.fallAsleep"]],
     },
+    setAlarm:{
+        text:behindPlayer.name+" decides to set the alarm"
+    },
+    getUp: {
+        text: "You get up begrudgingly, and waddle over to the center of your room. It's time to start your day.",
+        options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.begin"]]},
+    begin: {
+        text:"Are you sure you want to go outside?",
+        options: [["Correct", "behindSL.continue"], ["Go Back", "behindSL.return"]]},
+    return:{
+        text:"You walk back into the place you call home and question how you might have forgotten such important parts of the morning.",
+        options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.begin"]]},
 
-};
+    continue:{
+        text:behindPlayer.name+"walks to the front door and steps outside only to fall straight through the front patio. There is no real amount of time" +behindPlayer.name+"falls for an indescriminate amount of time before passing out.",
+        options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"], ["Search for an exit", "behindSL.searchExit"]]
+    }
+
+
+    }
+
+
+
+
+    
+;
 
 //Story Page
 let behindPage = document.getElementById('enterName'),
