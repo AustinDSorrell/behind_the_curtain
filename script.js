@@ -31,20 +31,20 @@ let behindSL = {
         options: [["Get Up","behindSL.getUp"], ["Set Alarm", "behindSL.setAlarm"], ["Fall Asleep", "behindSL.fallAsleep"]],
     },
     setAlarm:{
-        text:behindPlayer.name+" decides to set the alarm"
+        text:"You decide to set the alarm. What time do you choose?",
     },
     fallAsleep:{
-        text:behindPlayer.name+" tries to fall back asleep but is awoken to obnoxiously loud banging outside their window as well as loud cries from an unknown origin.",
-        options:[["Look out the window", "behindSL.lookOutWindow"], ["Scream", "behindSL.scream"]]
+        text: "You decide to fall back asleep. Why bother going outside anyway? You're much safer inside your home than anywhere else. You close your eyes and sleep. When you awake, you find that your room is uncomfortably pitchblack and dark. You flip on the side of your lamp and attempt to turn it on. It flickers but dies in a matter of seconds, as if the light itself is being consumed by the abyss. You begin to survey your now void like surroundings attentively. But are startled by a sudden and obnoxiously loud banging on the otherside of your bedroom window. Why someone would be knocking on your window this late at night is unknown, but is concerning none the less.",
+        options:[["Look Through Window", "behindSL.lookOutWindow"], ["Scream In Fear", "behindSL.scream"]]
     },
     lookOutWindow:{
         text: behindPlayer.name+" notices an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. " +behindPlayer.name+" is stunned by this horrifying sight. The creature breaks the window and strangles "+behindPlayer.name+" to death while demonic laughter in varying pitches echoes through their last memory.", 
-        options:[["restart"]]
+        options:[["Try Again"]]
     },
 
     scream:{
         text:behindPlayer.name+"'s bedroom door swings open revealing a being of faded darkness all but a mischievous smile. The being then strangles "+behindPlayer.name+"to death while demonic laughter in varying pitches echoes through their last memory.",
-        options:[["restart"]]
+        options:[["Try Again"]]
     },
 
     getUp: {
@@ -52,11 +52,10 @@ let behindSL = {
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.begin"]]},
     begin: {
         text:"Are you sure you want to go outside?",
-        options: [["Correct", "behindSL.continue"], ["Go Back", "behindSL.return"]]},
+        options: [["Yes.", "behindSL.continue"], ["No.", "behindSL.return"]]},
     return:{
         text:"You walk back into the place you call home and question how you might have forgotten such important parts of the morning.",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.begin"]]},
-
     continue:{
         text:behindPlayer.name+" walks to the front door and steps outside only to fall straight through the front patio. There is no real amount of time " +behindPlayer.name+" falls for an indescriminate amount of time before passing out.",
         options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"], ["Search for an exit", "behindSL.searchExit"]]
