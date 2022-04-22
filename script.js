@@ -38,13 +38,13 @@ let behindSL = {
         options:[["Look Through Window", "behindSL.lookOutWindow"], ["Scream In Fear", "behindSL.scream"]]
     },
     lookOutWindow:{
-        text: behindPlayer.name+" notices an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. " +behindPlayer.name+" is stunned by this horrifying sight. The creature breaks the window and strangles "+behindPlayer.name+" to death while demonic laughter in varying pitches echoes through their last memory.", 
-        options:[["Try Again"]]
+        text: "You notice an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. The horrifying sight ripples fear throughout your entire soul. As the creature begins to become more...identifyable. The window shatters with an abrupt force. The creature begins laughing demonically, as if its purpose is to taunt you as you feel your feet being lifted off the ground and your throat begins to tighten. Demonic laughter in varying pitches echoes throughout all while the darkness begins to darken more and more. You're weeps for help and attempts of gasps of air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is that creature's demonic laugh that came straight from hell itself.. Ending - Tormented",
+        options:[["Rise Again"]]
     },
 
     scream:{
-        text:behindPlayer.name+"'s bedroom door swings open revealing a being of faded darkness all but a mischievous smile. The being then strangles "+behindPlayer.name+"to death while demonic laughter in varying pitches echoes through their last memory.",
-        options:[["Try Again"]]
+        text: "You let out an excurtiating sounding roar and as you do, you begin hearing loud footsteps approach the bedroom door. Silence appears for a few seconds before the door swings forcefully revealing a being of faded darkness with what seems like a mischievous demonic smile. You begin to feel your throat tighten and dry up. Demonic laughter in varying pitches echoes throughout the room, all while the darkness begins fill your vison more and more. Everything is cold. Your weeps for help and gasps of air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is that creatures demonic laugh that came straight from hell itself. Ending - Intruder Alert",
+        options:[["Rise Again"]]
     },
 
     getUp: {
