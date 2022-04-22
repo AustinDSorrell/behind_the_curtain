@@ -24,7 +24,7 @@ let behindSL = {
             []
         ],
         options: [ //Options that go with the place variable
-            ["Correct", "behindSL.area1Open"], ["Incorrect", "behindSL"] // Format: ["Button Name", "Next Place Variable"]
+            ["Correct", "behindSL.area1Open"], ["Incorrect", "behindSL"] //Format: ["Button Name", "Next Place Variable"]
         ]
     },
 
