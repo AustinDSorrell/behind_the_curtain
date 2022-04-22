@@ -60,7 +60,7 @@ let behindSL = {
 
 
     continue:{
-        text:"you walk to the front door and steps outside only to fall straight through the front patio. There is no real amount of time you fall for an indescriminate amount of time before passing out.",
+        text:"You approach the front door and steps outside only to fall straight through the front patio. After falling through what seemed to be warped space, you eventually pass out mid flight from the rush of blood and adrenaline that went to your head.",
         options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"], ["Search for an exit", "behindSL.searchExit"]]
     },
     walk:{
