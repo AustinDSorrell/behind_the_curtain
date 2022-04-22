@@ -85,14 +85,14 @@ let behindSL = {
         options:[["Continue Down Hallway","behindSL.hallWayOption"], ["Damage a random wall", "behindSL.damage"]]
     },
 
-    //make the savable option of damaging the wall\\\\\\\\\\\\\\\\\\\\\\
+    //Make the savable option of damaging the wall
 
     hallWayOption:{
         text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.", 
         options:[["Search for an exit", "behindSL.searchExit"],["Call for help", "behindSL.call"]]},
 
     call:{
-        text:"After about an hour and a half of calling out the words “Is anyone out there? Can anyone hear me? Etc. You finally come to the conclusion that…YOU ARE IN COMPLETE ISOLATION.",
+        text:"After about an hour and a half of calling out the words ''Is anyone out there? Can anyone hear me?'' etc. You finally come to the conclusion that...YOU ARE IN COMPLETE ISOLATION.",
         options:[["walk around the building", "behindSL.walk"],["search for an exit", "behindSL.searchExit"]]},
 
     searchExit:{
@@ -101,19 +101,19 @@ let behindSL = {
 
 
     cabinets:{
-        text:"You open the filing cabinets and start rifling through them. You find paper clips, office supplies, a pen, and sticky notes. You carefully hold on to the pen and sticky notes to make sure they don’t get ruined",
+        text:"You open the filing cabinets and start rifling through them. You find paper clips, office supplies, a pen, and sticky notes. You carefully hold on to the pen and sticky notes to make sure they don't get ruined",
         options:[["approach desk", "behindSL.desk"]]
 
     },
     desk:{
-        text:"You sit down at the desk and begin to collect your thoughts. You have been standing for days at this point, and sitting on the floor never really was a choice if you wanted to keep your clothes in good condition. How long will it take to find an exit? How long will it take for you to starve? The lights are making an ear pitchingly loud noise now and you can feel your sanity beginning to dwindle.  You advert your gaze from the table after staring at it for a while due to the comfort and normalcy it gives, when you realize something. ‘Was this room always this color?’.",
+        text:"You sit down at the desk and begin to collect your thoughts. You have been standing for days at this point, and sitting on the floor never really was a choice if you wanted to keep your clothes in good condition. How long will it take to find an exit? How long will it take for you to starve? The lights are making an ear pitchingly loud noise now and you can feel your sanity beginning to dwindle.  You advert your gaze from the table after staring at it for a while due to the comfort and normalcy it gives, when you realize something. ''Was this room always this color?''.",
         options:[["Inspect Room","behindSL.inspectRoom"],["Inspect Table", "behindSL.inspectTable"]]
     },
     inspectTable:{
-        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ‘(insert player name), do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.’ On the back of the sticky note , the text reads ‘CODE: 10:28 AM’. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It’s almost as if it’s being fogged by a harsh black smoke inside your consciousness . You feel light headed.",
+        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.' On the back of the sticky note , the text reads ''CODE: 10:28 AM''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness . You feel light headed.",
         options:[["Inspect Room", "behindSL.inspectRoom"],]
 
-        //make an area here that adds an additional option if they have sticky notes\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //Make an area here that adds an additional option if they have sticky notes
     },
 
     inspectRoom:{
@@ -122,23 +122,23 @@ let behindSL = {
     },
 
     door:{
-        text:"“You approach the door and read the papers stapled onto it. It reads -- ‘Hello fellow wanderer, you aren’t alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you’ll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don’t know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I’d start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall).’",
+        text:"You approach the door and read the papers stapled onto it. It reads -- ''Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall).''",
         options:[["continue reading","behindSL.continueRead"],]},
 
     continueRead:{
-        text:"'Most people can’t no-clip for more than 3-5 seconds at a time. So falling through multiple floors shouldn’t be an issue (note that isn't a guarantee). If that doesn’t work. Try intensely thinking about things that frighten or excite you. If you’re a normal person. The knocking inside that room should already be giving you the creeps, and if you are an even more paranoid/fearful person, you’d probably considered or attempted to curl up in the fetal position to cry manically, and trying that again might work as well. -- Hallucinations are common so no shame if you think something’s watching you (because something usually is) and in a matter of a few moments you’ll probably find yourself falling through the floor anyway. -- When you make it to the next level. Attempt to find our base at - Fun party land :) ! Come join us ! We have cake! :D -- The remaining bits of the paper seem to have been written in crayon and a yellow-reddish fluid/liquid coating. Many unintelligible words and drawings block the remaining text which you acknowledge would’ve been helpful to see.",
+        text:"''Most people can't no-clip for more than 3-5 seconds at a time. So falling through multiple floors shouldn't be an issue (note that isn't a guarantee). If that doesn't work. Try intensely thinking about things that frighten or excite you. If you're a normal person. The knocking inside that room should already be giving you the creeps, and if you are an even more paranoid/fearful person, you'd probably considered or attempted to curl up in the fetal position to cry manically, and trying that again might work as well. -- Hallucinations are common so no shame if you think something's watching you (because something usually is) and in a matter of a few moments you'll probably find yourself falling through the floor anyway. -- When you make it to the next level. Attempt to find our base at - Fun party land :) ! Come join us ! We have cake! :D -- The remaining bits of the paper seem to have been written in crayon and a yellow-reddish fluid/liquid coating. Many unintelligible words and drawings block the remaining text which you acknowledge would've been helpful to see.",
         options:[["Examine Paper", "behindSL.examinePaper"],]
     },
     examinePaper:{
-        text:"The paper’s details at the top of page read: ‘M.E.G, Survival, Wandering, and Researching Guide Level 0 - Author: James John Corwin’.",
+        text:"The paper's details at the top of page read: 'M.E.G, Survival, Wandering, and Researching Guide Level 0 - Author: James John Corwin'.",
         options:[["Attempt to NO-CLIP","behindSL.attemptNOCLIP"], ["Open the Door","behindSL.door2"],]
     },
     door2:{
-        text:"After reading that load of garbage, you think whatever sick monster that put you in this place must have stapled that paper on the door to give you a false sense of hope. Good thing you’re smarter than that because they were probably looking forward to you attempting to pass through the floor like an idiot as some sick form of entertainment. You open the door and walk through it, finding yourself in a completely different set of corridors than what you originally remember when you entered. (But who really cares at this point anyway?) The mono-yellow returns, and the moist carpet along with it. You haven’t eaten anything in days, and are starving to the point of considering biting your own flesh for some form of nutritional value while also desperately trying to drink your own saliva to refrain from drinking the dirty carpet water which you could tell can get you deathly ill. The buzzing of the lights is ear-piercing enough that it makes you begin to cover your ears and bend them shut to muffle the sound.  But the sound doesn't stop and instead becomes louder and more clear. You begin to scream and howl in agony when the lights suddenly shutter and blackout. -- After the longest 40 seconds of your life, the lights return but something is waiting for you… A loud thud with the appearance of a black humanoid figure with intense glowing yellow eyes stares directly at you.",
+        text:"After reading that load of garbage, you think whatever sick monster that put you in this place must have stapled that paper on the door to give you a false sense of hope. Good thing you're smarter than that because they were probably looking forward to you attempting to pass through the floor like an idiot as some sick form of entertainment. You open the door and walk through it, finding yourself in a completely different set of corridors than what you originally remember when you entered. (But who really cares at this point anyway?) The mono-yellow returns, and the moist carpet along with it. You haven't eaten anything in days, and are starving to the point of considering biting your own flesh for some form of nutritional value while also desperately trying to drink your own saliva to refrain from drinking the dirty carpet water which you could tell can get you deathly ill. The buzzing of the lights is ear-piercing enough that it makes you begin to cover your ears and bend them shut to muffle the sound.  But the sound doesn't stop and instead becomes louder and more clear. You begin to scream and howl in agony when the lights suddenly shutter and blackout. -- After the longest 40 seconds of your life, the lights return but something is waiting for you… A loud thud with the appearance of a black humanoid figure with intense glowing yellow eyes stares directly at you.",
         options:[["Run Away", "behindSL.runAway"],["Fight Back", "behindSL.fightBack"],["Remain Still","behindSL.remainStill"]]},
 
     runAway:{
-        text:"As you turn around to flee in the opposite direction. You see multiple black figures of the same description stalking you. Black sludge coats the walls from which more figures spawn from and your heart begins to tighten from the fear. You don’t see a way to get past them.",
+        text:"As you turn around to flee in the opposite direction. You see multiple black figures of the same description stalking you. Black sludge coats the walls from which more figures spawn from and your heart begins to tighten from the fear. You don't see a way to get past them.",
         options:[["Fight Back", "behindSL.fightBack"],["Remain Still","behindSL.remainStill"]]
     },
     fightBack:{
@@ -155,7 +155,7 @@ let behindSL = {
 
 
 //---------------------------------------------------\\
-//-------------area 3 - level 1 ---------------------\\
+//--------------Area 3: level 1 ---------------------\\
 //---------------------------------------------------\\
 
 attemptNOCLIP:{
@@ -164,8 +164,6 @@ attemptNOCLIP:{
 },
 
 };
-
-
 
 //Story Page
 let behindPage = document.getElementById('enterName'),
