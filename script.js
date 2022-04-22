@@ -159,8 +159,7 @@ let behindSL = {
 
     area3:{
     text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you’re directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you. -- While trying to recall these feelings, your attention is disrupted by the sounds of various loud, echoing, noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed and sick from the lack of food and water.",
-    options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"]["Wander Around", "behindSL.wander"],]
-},
+    options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"]["Wander Around", "behindSL.wander"],]},
 
 
 };
