@@ -1,30 +1,36 @@
-   bag.style.display = 'none';
+bag.style.display = 'none'; //Inventory bag displayed as none until player picks up an item warranting an inventory.
 
-let behindPlayer = {
+let behindPlayer = { //Player object with properties.
     name: "player",
     status: "unafflicted",
     sanity: "sane",
     inventory: "empty",
-    choices: []
+    choices: [],
+    clothes: "none",
 };
 
-let behindAlarm = {
+let behindAlarm = { //Alarm object with properties.
     time:"10:28am",
 };
+
 
 //Main Story Variable
 
 let behindSL = {
 
-    characterConfirm: {
-        text: "Your name is " + behindPlayer.name + " correct?",
-        applicationCheck: [
+    characterConfirm: { //"place" variable
+        text: "Your name is " + behindPlayer.name + " correct?", //Text that goes with the place variable.
+        applicationCheck: [ //Prototype status check
             []
         ],
-        options: [
-            ["Correct", "behindSL.area1Open"], ["Incorrect", "behindSL"]
+        options: [ //Options that go with the place variable
+            ["Correct", "behindSL.area1Open"], ["Incorrect", "behindSL"] // Format: ["Button Name", "Next Place Variable"]
         ]
     },
+
+        //----------------------------------------\\
+        //-------------Area 1: Bedroom------------\\
+        //----------------------------------------\\
 
     area1Open: {
         text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
@@ -36,7 +42,7 @@ let behindSL = {
     },
 
     fallAsleep:{
-        text: "You decide to fall back asleep. Why bother going outside anyway? You're much safer inside your home than anywhere else. You close your eyes and sleep. When you awake, you find that your room is uncomfortably pitchblack and dark. You flip on the side of your lamp and attempt to turn it on. It flickers but dies in a matter of seconds, as if the light itself is being consumed by the abyss. You begin to survey your now void like surroundings attentively. But are startled by a sudden and obnoxiously loud banging on the otherside of your bedroom window. Why someone would be knocking on your window this late at night is unknown, but is concerning none the less.",
+        text: "You decide to fall back asleep. Why bother going outside anyway? You're much safer inside your home than anywhere else. You close your eyes and sleep. When you awake, you find that your rooms atmosphere is incredibly unsettling and uncomfortably dark. You flip on the side of your lamp and attempt to turn it on. It flickers but dies in a matter of seconds, as if the light itself is being consumed by the abyss. You begin to survey your now void like surroundings attentively. But are startled by a sudden and obnoxiously loud banging on the otherside of your bedroom window. Why someone would be knocking on your window this late at night is unknown, but is concerning none the less.",
         options:[["Look Through Window", "behindSL.lookOutWindow"], ["Scream In Fear", "behindSL.scream"]]
     },
 
@@ -65,10 +71,9 @@ let behindSL = {
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.continueOutside"]]
     },
 
-        //--------------------------------------\\
-        //-------------Area 2: Level0------------\\
-        //---------------------------------------\\
-
+        //----------------------------------------\\
+        //-------------Area 2: Level 0------------\\
+        //----------------------------------------\\
 
     continueOutside: {
         text:"You approach the front door and steps outside only to fall straight through the front patio. After falling through what seemed to be warped space, you eventually pass out mid flight from the rush of blood and adrenaline that went to your head",
@@ -94,12 +99,11 @@ let behindPage = document.getElementById('enterName'),
 console.log(behindData);
 
 //Related variables
-let moveArea = behindSL.characterConfirm;
-let moveSwitch = document.getElementById("moveSwitch");
+let moveArea = behindSL.characterConfirm;  //Sets moveArea variable as the character confirmation screen to start the loop.
 var behindBranches = ["behindSL"];
 let behindNameStored = false;
 
-function nextArea(place) {
+function nextArea(place) { //Replaces the "moveArea" variable.
     moveArea = place;
 }
 
@@ -118,12 +122,12 @@ function behindNameConstruct(place) {
     return message;
 }
 
-function statusUpdate() {
+function statusUpdate() { //Currently not in use.
     statsDiv = getElementsById("stats");
     statsDiv.innerHTML = behindData;
 }
 
-function behindDataY(event) {
+function behindDataY(event) { //Function that stores player name and other data.
     if (behindNameStored == false) {
       let behindTextStored = behindData['playerName'].value;
       let output = document.getElementById('output');
@@ -131,12 +135,12 @@ function behindDataY(event) {
       behindNameStored = true;
         }
 
-output.innerHTML = `${behindNameConstruct(moveArea)}`;
+output.innerHTML = `${behindNameConstruct(moveArea)}`; //Outputs function behindNameConstruct into inner HTML index.
 
-console.log(behindPlayer);
+console.log(behindPlayer); //Function that stores player name and other data.
 
-event.preventDefault();
+event.preventDefault(); //Stop submit buttons from applying a page refresh.
 
     }
 
-behindPage.addEventListener('submit', behindDataY);
+behindPage.addEventListener('submit', behindDataY); //Event listener to grab behindDataY function upon submit.
