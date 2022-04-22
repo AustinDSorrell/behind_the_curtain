@@ -43,7 +43,7 @@ let behindSL = {
     },
 
     scream:{
-        text: "You let out an excurtiating sounding roar and as you do, you begin hearing loud footsteps approach the bedroom door. Silence appears for a few seconds before the door swings forcefully revealing a being of faded darkness with what seems like a mischievous demonic smile. You begin to feel your throat tighten and dry up. Demonic laughter in varying pitches echoes throughout the room, all while the darkness begins fill your vison more and more. Everything is cold. Your weeps for help and gasps of air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is that creatures demonic laugh that came straight from hell itself. Ending - Intruder Alert",
+        text: "You let out an excurtiating sounding roar and as you do, you begin hearing loud footsteps approach the bedroom door. Silence appears for a few seconds before the door swings forcefully revealing a being of faded darkness with what seems like a mischievous demonic smile. You begin to feel your throat tighten and dry up. Demonic laughter in varying pitches echoes throughout the room, all while the darkness begins fill your vison more and more. Everything is cold. Your weeps for help and gasps of air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is that creature's demonic laugh that came straight from hell itself. Ending - Intruder Alert",
         options:[["Rise Again"]]
     },
 
