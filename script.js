@@ -57,7 +57,7 @@ let behindSL = {
 
     begin: {
         text:"Are you sure you want to go outside?",
-        options: [["Yes.", "behindSL.continue"], ["No.", "behindSL.return"]]
+        options: [["Yes.", "behindSL.continueOutside"], ["No.", "behindSL.return"]]
     },
 
     return:{
@@ -70,7 +70,7 @@ let behindSL = {
         //---------------------------------------\\
 
 
-    continueOutside:{
+    continueOutside: {
         text:"You approach the front door and steps outside only to fall straight through the front patio. After falling through what seemed to be warped space, you eventually pass out mid flight from the rush of blood and adrenaline that went to your head",
         options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"],["Search for an exit", "behindSL.searchExit"]]
     },
