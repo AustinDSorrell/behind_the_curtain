@@ -69,7 +69,7 @@ let behindSL = {
         options:[["Continue Down Hallway","behindSL.hallway"],["Damage a random wall", "behindSL.damage"]]
     },
     hallway:{
-        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you’ve come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.",
+        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.",
         options:[["Search for an exit", "behindSL.searchExit"]["Call for help", "behindSL.call"]]
 
     }
