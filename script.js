@@ -65,16 +65,20 @@ let behindSL = {
         options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"], ["Search for an exit", "behindSL.searchExit"]]
     },
     walk:{
-        text:"You walk around and explore the general area. You pick random areas to follow, take some turns that lead to a dead-end, and find a hallway that looks like it goes straight for miles. You begin to notice that the lights sound significantly louder than before.",
-        options:[["Continue Down Hallway","behindSL.hallway"],["Damage a random wall", "behindSL.damage"]]
+        text:"You walk around and explore the general area. You pick random areas to follow, take some turns that lead to a dead-end, and find a corridor that looks like it goes straight for miles. You begin to notice that the lights sound significantly louder than before.",
+        options:[["Continue Down Hallway","behindSL.hallWayOption"], ["Damage a random wall", "behindSL.damage"]]
     },
-    hallway:{
-        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.",
-        options:[["Search for an exit", "behindSL.searchExit"]["Call for help", "behindSL.call"]]
+    hallWayOption:{
+        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.", 
+        options:[["Search for an exit", "behindSL.searchExit"],["Call for help", "behindSL.call"]]},
 
-    }
+    call:{
+        text:"After about an hour and a half of calling out the words “Is anyone out there? Can anyone hear me? Etc. You finally come to the conclusion that…YOU ARE IN COMPLETE ISOLATION.",
+        options:[["walk around the building", "behindSL.walk"],["search for an exit", "behindSL.searchExit"]]},
 
-
+    searchExit:{
+        text:"You start searching for an exit. After looking around for what feels like days stretching across motions of insanity and sickness, you come to find a room with a couple filing cabinets and a singular dark oak desk in the center, a regularly proportionate office space.",
+        options:[["Search cabinets", "behindSL.cabinets"],["Approach desk", "behindSL.desk"]]},
 
     }
     
