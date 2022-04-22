@@ -22,10 +22,9 @@ let behindSL = {
             []
         ],
         options: [
-            ["Correct", "behindSL.area1Open"]
+            ["Correct", "behindSL.area1Open"], ["Incorrect", "behindSL"]
         ]
     },
-
     area1Open: {
         text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
         options: [["Get Up","behindSL.getUp"], ["Set Alarm", "behindSL.setAlarm"], ["Fall Asleep", "behindSL.fallAsleep"]],
@@ -55,9 +54,9 @@ let behindSL = {
         text:"You walk back into the place you call home and question how you might have forgotten such important parts of the morning.",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.begin"]]},
 
-        //-------------------------------\\
+        //--------------------------------------\\
         //-------------Area 2: Level0------------\\
-        //-------------------------------\\
+        //---------------------------------------\\
 
 
     continue:{
@@ -69,7 +68,7 @@ let behindSL = {
         options:[["Continue Down Hallway","behindSL.hallway"],["Damage a random wall", "behindSL.damage"]]
     },
     hallway:{
-        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.",
+        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point. Your vision blurs and begins to haze from light headedness.",
         options:[["Search for an exit", "behindSL.searchExit"]["Call for help", "behindSL.call"]]
 
     }
