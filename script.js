@@ -76,7 +76,7 @@ let behindSL = {
     },
 
     return:{
-        text:"You walk back inside and question yourself. How could you ever forgot the most important steps of the morning!?",
+        text:"You walk back inside. How could you ever forgot the most important steps of the morning!?",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.continueOutside"]]
     },
 
