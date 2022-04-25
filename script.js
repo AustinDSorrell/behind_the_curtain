@@ -37,7 +37,7 @@ let behindSL = {
         options: [["Get Up","behindSL.getUp"], ["Set Alarm", "behindSL.setAlarm"], ["Fall Asleep", "behindSL.fallAsleep"]],
     },
 
-    setAlarm:{
+    setAlarm:{ //Needs Functionality.
         text:"You decide to set the alarm. What time do you choose?",
     },
 
@@ -56,7 +56,7 @@ let behindSL = {
         options:[["Rise Again"]]
     },
 
-    getUp: {
+    getUp: { // Create behindSL.shower, dress, teeth, and create functionality for it.
         text: "You get up begrudgingly, and waddle over to the center of your room. It's time to start your day.",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.begin"]]
     },
@@ -76,7 +76,7 @@ let behindSL = {
         //----------------------------------------\\
 
     continueOutside: {
-        text:"You approach the front door and steps outside only to fall straight through the front patio. After falling through what seemed to be warped space, you eventually pass out mid flight from the rush of blood and adrenaline that went to your head",
+        text:"You approach the front door and steps outside only to fall straight through the front patio. After falling through what seemed to be warped space, you eventually pass out mid flight from the rush of blood and adrenaline that went to your head.",
         options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"],["Search for an exit", "behindSL.searchExit"]]
     },
 
@@ -101,7 +101,7 @@ let behindSL = {
 
 
     cabinets:{
-        text:"You open the filing cabinets and start rifling through them. You find paper clips, office supplies, a pen, and sticky notes. You carefully hold on to the pen and sticky notes to make sure they don't get ruined",
+        text:"You open the filing cabinets and start rifling through them. You find paper clips, office supplies, a pen, and sticky notes. You carefully hold on to the pen and sticky notes to make sure they don't get ruined.",
         options:[["approach desk", "behindSL.desk"]]
 
     },
@@ -122,7 +122,7 @@ let behindSL = {
     },
 
     door:{
-        text:"You approach the door and read the papers stapled onto it. It reads -- ''Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall).''",
+        text:"You approach the door and read the papers stapled onto it. It reads -- ''Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall)...''",
         options:[["continue reading","behindSL.continueRead"],]},
 
     continueRead:{
@@ -150,16 +150,16 @@ let behindSL = {
         options:[["continue","behindSL.area3"],]},
 
     attemptNOCLIP:{
-    text:"You think about what the paper said and not having come in contact with anything human in forever, you believe what it says. You try imagining the feeling of falling through the floor similar to when you walked outside that fateful day. After around an hour of jumping up and down and diving onto the floor to hopefully pass through it. You begin to doubt what the paper has to say. You walk back to the table to take a seat when all of a sudden you trip over your own leg falling rapidly, face crashing towards the floor when you end up passing right through it.",
-    options:[["Continue","behindSL.area3"],]},
+        text:"You think about what the paper said and not having come in contact with anything human in forever, you believe what it says. You try imagining the feeling of falling through the floor similar to when you walked outside that fateful day. After around an hour of jumping up and down and diving onto the floor to hopefully pass through it. You begin to doubt what the paper has to say. You walk back to the table to take a seat when all of a sudden you trip over your own leg falling rapidly, face crashing towards the floor when you end up passing right through it.",
+        options:[["Continue","behindSL.area3"],]},
 
     //---------------------------------------------------\\
     //-------------Area 3: level 1 ---------------------\\
     //---------------------------------------------------\\
 
     area3:{
-    text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you’re directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you. -- While trying to recall these feelings, your attention is disrupted by the sounds of various loud, echoing, noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed and sick from the lack of food and water.",
-    options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"]["Wander Around", "behindSL.wander"],]},
+        text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you’re directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you. -- While trying to recall these feelings, your attention is disrupted by the sounds of various loud, echoing, noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed and sick from the lack of food and water.",
+        options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"]["Wander Around", "behindSL.wander"],]},
 
 
 };
