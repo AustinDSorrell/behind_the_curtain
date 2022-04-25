@@ -13,6 +13,10 @@ let behindAlarm = { //Alarm object with properties.
     time:"10:28am",
 };
 
+let lvlZeroWall ={
+    status:"damaged",
+}
+
 
 //Main Story Variable
 
@@ -47,12 +51,17 @@ let behindSL = {
     },
 
     lookOutWindow:{
-        text: "You notice an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. The horrifying sight ripples fear throughout your entire soul. As the creature begins to become more...identifyable. The window shatters with an abrupt force. The creature begins laughing demonically, as if its purpose is to taunt you as you feel your feet being lifted off the ground and your throat begins to tighten. Demonic laughter in varying pitches echoes throughout all while the darkness begins to darken more and more. You're weeps for help and attempts of gasps of air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is that creature's demonic laugh that came straight from hell itself.. Ending - Tormented",
+        text: "You notice an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. The horrifying sight ripples fear throughout your entire soul. As the creature begins to become more...identifyable. The window shatters with an abrupt force. The creature begins laughing demonically, as if its purpose is to taunt you as you feel your feet being lifted off the ground and your throat begins to tighten. Demonic laughter in varying pitches echoes throughout all while the darkness begins to cloud more and more. You're weeps for help and gasps for air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is the creature's demonic laugh that came straight from hell itself.. Ending - Tormented",
         options:[["Rise Again"]]
     },
     
     scream:{
-        text: "You let out an excurtiating sounding roar and as you do, you begin hearing loud footsteps approach the bedroom door. Silence appears for a few seconds before the door swings forcefully revealing a being of faded darkness with what seems like a mischievous demonic smile. You begin to feel your throat tighten and dry up. Demonic laughter in varying pitches echoes throughout the room, all while the darkness begins fill your vison more and more. Everything is cold. Your weeps for help and gasps of air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is that creature's demonic laugh that came straight from hell itself. Ending - Intruder Alert",
+        text: "You let out an excurtiating roar of agony and terror. You begin hearing loud, echoey, footsteps approach the bedroom door. Silence appears for a few seconds before abrupt knocking is heard at the door for your bedroom. You live alone, and the front door is locked.",
+        options:[["I know what you fear " + behindPlayer.name, "behindSL.scream2"]]
+    },
+
+    scream2:{
+        text:"The door swings forcefully revealing a being of faded darkness with what seems like a mischievous demonic smile. You begin to feel your throat tighten and dry up. Demonic laughter in varying pitches echoes throughout the room, all while the darkness begins to fill your vison more and more. Everything is cold. Your weeps for help and gasps for air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is the creature's demonic laugh that came straight from hell itself.... Ending - Intruder Alert",
         options:[["Rise Again"]]
     },
 
@@ -63,11 +72,11 @@ let behindSL = {
 
     begin: {
         text:"Are you sure you want to go outside?",
-        options: [["Yes.", "behindSL.continueOutside"], ["No.", "behindSL.return"]]
+        options: [["Yes", "behindSL.continueOutside"], ["No", "behindSL.return"]]
     },
 
     return:{
-        text:"You walk back into the place you call home and question how you might have forgotten such important parts of the morning.",
+        text:"You walk back inside and question yourself. How could you ever forgot the most important steps of the morning!?",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Brush Teeth", "brushTeeth"], ["Begin the Day", "behindSL.continueOutside"]]
     },
 
@@ -76,8 +85,8 @@ let behindSL = {
         //----------------------------------------\\
 
     continueOutside: {
-        text:"You approach the front door and steps outside only to fall straight through the front patio. After falling through what seemed to be warped space, you eventually pass out mid flight from the rush of blood and adrenaline that went to your head.",
-        options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"],["Search for an exit", "behindSL.searchExit"]]
+        text:"You approach the front door and step outside. You attempt to plant your feet on the patio but end up falling straight through it. After falling into what seemed to be warped space, your mind collapes from the confusion and you eventually pass out mid flight...",
+        options:[["Continue", "behindSL.level0intro"]]
     },
 
     walk:{
@@ -88,7 +97,7 @@ let behindSL = {
     //Make the savable option of damaging the wall
 
     hallWayOption:{
-        text:"You walk down the hallway in front of you, after walking for what seems like an eternity. You realize you've come full circle, ending up at the exact place you started. You never made any turns and the hum of lights is deafeningly loud at this point . Your vision blurs to be hazy from light headedness.", 
+        text:"You walk down the hallway in front of you. After walking for what seems like an eternity, you realize you've come full circle and have ended up at the exact same place you started. You never made any turns and the hum of lights is deafeningly loud. Your vision blurs and you feel as if your brain is melting.", 
         options:[["Search for an exit", "behindSL.searchExit"],["Call for help", "behindSL.call"]]},
 
     call:{
@@ -96,7 +105,7 @@ let behindSL = {
         options:[["walk around the building", "behindSL.walk"],["search for an exit", "behindSL.searchExit"]]},
 
     searchExit:{
-        text:"You start searching for an exit. After looking around for what feels like days stretching across motions of insanity and sickness, you come to find a room with a couple filing cabinets and a singular dark oak desk in the center, a regularly proportionate office space.",
+        text:"You start searching for an exit. After looking around for what feels like days stretching across motions of insanity and sickness, you come to find a room with a couple filing cabinets and a singular dark oak desk in the center. A regularly proportionate office space.",
         options:[["Search cabinets", "behindSL.cabinets"],["Approach desk", "behindSL.desk"]]},
 
 
@@ -110,7 +119,7 @@ let behindSL = {
         options:[["Inspect Room","behindSL.inspectRoom"],["Inspect Table", "behindSL.inspectTable"]]
     },
     inspectTable:{
-        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.'' On the back of the sticky note , the text reads ''CODE: 10:28 AM''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness . You feel light headed.",
+        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.'' On the back of the sticky note , the text reads ''CODE: 10:28''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness . Its hard to concentrate.",
         options:[["Inspect Room", "behindSL.inspectRoom"],]
 
         //Make an area here that adds an additional option if they have sticky notes
@@ -158,7 +167,7 @@ let behindSL = {
     //---------------------------------------------------\\
 
     area3:{
-        text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you’re directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you. -- While trying to recall these feelings, your attention is disrupted by the sounds of various loud, echoing, noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed and sick from the lack of food and water.",
+        text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
         options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"]["Wander Around", "behindSL.wander"],]}
 };
 
