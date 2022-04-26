@@ -89,9 +89,15 @@ let behindSL = {
         options:[["Continue", "behindSL.level0intro"]]
     },
 
+    
+    level0intro:{
+        text:"You wake up in a room with the stink of old moist carpet and your face rug burned and wet from your somewhat uncomfortable sleeping position on the carpet floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
+        options:[["Walk Around the building", "behindSL.walk"],["Call for help", "behindSL.call"]]},
+
     level0intro: {
         text: "You wake up in a room with the stink of old moist carpet and your face rug burned and wet from a somewhat uncomfortable sleeping position on an unfinished wet carpet floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
         options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"],["Search for an exit", "behindSL.searchExit"]]
+
     },
 
     walk:{
@@ -157,19 +163,78 @@ let behindSL = {
     },
     remainStill:{
         text:"Maybe it wants a staring contest? You begin to stare blankly at the creature, and to your surprise, it does the same. Staring back at you eyes bulging with a trance-enclosing glow. You knew eventually one of you would snap and the contest would end. What might happen when it ends? What will the creature do? To your surprise the lights flicker out and the creature dissipates from a figure into a shadow into an outline of mold on the moon yellow wall. You realize immediately after the contest you lost track of time,'How long was I staring at that moldy wall?' your eyes on fire with pain, you try to blink to soothe the anguish but dehydration begins to take its toll on your body beyond dry mouth. After rubbing your eyes for what felt like hours. You eventually collapse on the floor and awaken to find yourself somewhere completely different.",
-        options:[["continue","behindSL.area3"],]},
+        options:[["Continue","behindSL.area3"]]
+    },
 
     attemptNOCLIP:{
         text:"You think about what the paper said and not having come in contact with anything human in forever, you believe what it says. You try imagining the feeling of falling through the floor similar to when you walked outside that fateful day. After around an hour of jumping up and down and diving onto the floor to hopefully pass through it. You begin to doubt what the paper has to say. You walk back to the table to take a seat when all of a sudden you trip over your own leg falling rapidly, face crashing towards the floor when you end up passing right through it.",
-        options:[["Continue","behindSL.area3"],]},
 
-    //---------------------------------------------------\\
-    //--------------Area 3: level 1 ---------------------\\
-    //---------------------------------------------------\\
+        options:[["Continue","behindSL.area3"]]
+    },
+    example:{
+        text:"",
+        options:[["",""],["",""]],
+    },
+    //---------------------------------------------------\\   
+    //-------------Area 3: level 1 ----------------------\\
+
 
     area3:{
         text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
-        options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"]["Wander Around", "behindSL.wander"],]}
+        options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"],["Wander Around", "behindSL.wander"]]
+    },
+
+    noclipAgain:{
+        text:"“You've decided enough is enough and this place was not safe in the slightest. That paper must've lied to you, and now you're in a worse position than before. You attempt to clip through the floor as you did previously. Attempting a few times to no avail. You realize all you're doing is tenderizing yourself for whatever might be making those sounds and as you turn around you spot a relatively familiar figure standing underneath a flood light.”",
+        options:[["",""],["",""]],
+    },
+//the option above needs a prompt added to change text later
+
+wander:{
+    text:"You begin wandering the vastly open area realizing its scale after a couple of hours of walking. You seem to have found yourself inside of some sort of industrial warehouse complex. -- As you look around. -- You find a vending machine, water fountain, miniature flashlight with a clipboard placed below it, and a walkie talkie.",
+    options:[["Drink from fountain","behindSL.fountain"],["try vending machine","behindSL.vendingMachine"]],
+},
+
+fountain:{
+    text:"You walk towards the fountain and place your hand over the button to dispense the water. You push in and are surprised to find out that it actually works! You pull your head down vigorously and begin drinking from the spout. -- You realize the water has a distinctly subtle sweetness that is pleasant, but isn't quite what you expected at first. -- You feel as if the large sense of dread that has been plaguing you has been lifted off your shoulders.",
+    options:[["Try Vending Machine","behindSL.vendingMachine"],["",""]],
+},
+
+vendingMachine:{
+    text:"You attempt to work the vending machine but it seems to require an employee passcode to use.",
+    options:[["USE KEYPAD","behindSL.keypad"],["Break into machine","behindSL.breakMachine"],["Leave Machine Alone","behindSL.leaveMachine"]],
+},
+leaveMachine:{
+    text:"Thinking there isn't anything good in the vending machine anyways you decide to leave it alone.",
+    options:[["Drink from fountain","behindSL.fountain"],["try vending machine","behindSL.vendingMachine"],["Take Flashlight and Walkie Talkie","behindSL.take"]],
+},
+
+keypad:{
+    text:"",
+    options:[["",""],["",""]],
+},
+// ╬◘really important-----try to set up keypad please♦◘\\
+// ╬◘really important-----try to set up keypad please♦◘\\
+// ╬◘really important-----try to set up keypad please♦◘\\
+// ╬◘really important-----try to set up keypad please♦◘\\
+// ╬◘really important-----try to set up keypad please♦◘\\
+// ╬◘really important-----try to set up keypad please♦◘\\
+
+breakMachine:{
+    text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
+    options:[["Make Your Way Down","behindSL.down"],["Continue breaking into the Machine","behindSL.continueBreakMachine"]],
+},
+
+down:{
+    text:"You make way down the metal staircase for what feels like ages, after several dozen steps the silence of the previous area begins to fade as it's overtaken by the hissing of pneumatic machinery. The clamping of presses and the clank of old factory machines whirr into life as you descend deeper into the depths of this staircase. Eventually you make your way to the bottom just barely beyond the factory hissing with it still audible to your ears. You scan the basement for anything of interest and find some sticky notes and a pencil. It's the perfect scenario, if someone ends up in your situation you can write notes along the walls to give tips and tricks on what to do next. This thought was cut short as the hissing from the factory was changed into the hissing of a living being, this thing was mimicking the sounds of the machine's pneumatic hissing and was doing a pretty good job. As the creature of false proportions and featureless faces (yes multiple) come closer and closer it drops into the floor just before it reaches you. Good it wasn't real, however what happened next is very real as this is a warm dark and somewhat damp from the steam in the factory this had attracted this living fungus spider creature, what was strange for this interaction was that it appeared to be a massive hive of these things with more than 40 spilling in through the doorway to the stairs. It turns out these things are incredibly infectious and ended this adventure short. -- you died -- OverRun ending",
+    options:[["Try Again",""]]
+},
+
+continueBreakMachine:{
+    text:"You return to the vending machine really wanting those snacks as it's the only food you've seen in days. Banging on the vending machine in desperation you notice a change in color on the paint and glass going from black and clear to a smeared red. In your blind fury and hunger you kept hitting the vending machine to the point where your hands had suffered damage from attacking the food filled metal box.+Wounded Status Effect -- The sounds of you banging against the metal vending machine have attracted some monsters of the dark, you can hear them, but you can't see them. You soon realize that the sounds were created by the darkness itself as it swallows you whole and you crossfade out of existence without feeling a thing. -- You Died -- Hungering Darkness ending",
+    options:[["Try Again",""]]},
+
+
 };
 
 //Story Page
