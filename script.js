@@ -22,9 +22,9 @@ let lvlZeroWall ={
 
 let behindSL = {
 
-    characterConfirm: { //"place" variable
+    characterConfirm: { //"place" variable.
         text: "Your name is " + behindPlayer.name + " correct?", //Text that goes with the place variable.
-        applicationCheck: [ //Prototype status check
+        applicationCheck: [ //Prototype status check.
             []
         ],
         options: [ //Options that go with the place variable
@@ -89,9 +89,15 @@ let behindSL = {
         options:[["Continue", "behindSL.level0intro"]]
     },
 
+    
     level0intro:{
         text:"You wake up in a room with the stink of old moist carpet and your face rug burned and wet from your somewhat uncomfortable sleeping position on the carpet floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
-        options:[["Walk Around the building", "behindSL.walk"],["Call for help", "behindSL.call"]],
+        options:[["Walk Around the building", "behindSL.walk"],["Call for help", "behindSL.call"]]},
+
+    level0intro: {
+        text: "You wake up in a room with the stink of old moist carpet and your face rug burned and wet from a somewhat uncomfortable sleeping position on an unfinished wet carpet floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
+        options:[["Walk around the building","behindSL.walk"],["Call out for help", "behindSL.call"],["Search for an exit", "behindSL.searchExit"]]
+
     },
 
     walk:{
@@ -99,7 +105,7 @@ let behindSL = {
         options:[["Continue Down Hallway","behindSL.hallWayOption"], ["Damage a random wall", "behindSL.damage"]]
     },
 
-    //Make the savable option of damaging the wall
+    //Make the savable option of damaging the wall.
 
     hallWayOption:{
         text:"You walk down the hallway in front of you. After walking for what seems like an eternity, you realize you've come full circle and have ended up at the exact same place you started. You never made any turns and the hum of lights is deafeningly loud. Your vision blurs and you feel as if your brain is melting.", 
@@ -111,13 +117,11 @@ let behindSL = {
 
     searchExit:{
         text:"You start searching for an exit. After looking around for what feels like days stretching across motions of insanity and sickness, you come to find a room with a couple filing cabinets and a singular dark oak desk in the center. A regularly proportionate office space.",
-        options:[["Search cabinets", "behindSL.cabinets"],["Approach desk", "behindSL.desk"]]},
-
-
+        options:[["Search cabinets", "behindSL.cabinets"],["Approach desk", "behindSL.desk"]]
+    }, 
     cabinets:{
         text:"You open the filing cabinets and start rifling through them. You find paper clips, office supplies, a pen, and sticky notes. You carefully hold on to the pen and sticky notes to make sure they don't get ruined.",
         options:[["approach desk", "behindSL.desk"]]
-
     },
     desk:{
         text:"You sit down at the desk and begin to collect your thoughts. You have been standing for days at this point, and sitting on the floor never really was a choice if you wanted to keep your clothes in good condition. How long will it take to find an exit? How long will it take for you to starve? The lights are making an ear pitchingly loud noise now and you can feel your sanity beginning to dwindle.  You advert your gaze from the table after staring at it for a while due to the comfort and normalcy it gives, when you realize something. ''Was this room always this color?''.",
@@ -127,14 +131,12 @@ let behindSL = {
         text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.'' On the back of the sticky note , the text reads ''CODE: 10:28''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness . Its hard to concentrate.",
         options:[["Inspect Room", "behindSL.inspectRoom"],]
 
-        //Make an area here that adds an additional option if they have sticky notes
+        //Make an area here that adds an additional option if they have sticky notes.
     },
-
     inspectRoom:{
         text:"You take time to analyze your current surroundings. You begin to hear abrupt, loud, knocking, coming from within the walls and sounds of various copying machines and papers shuffling can also be heard. The wallpaper is a mixture of dark brown and manilla. The lights abruptly change luminosity and sometimes darken to a pitch black, with varying sounds of loud humming from the single light source above the table. You also see a steel office door with some papers stapled to it.",
         options:[["Walk to Door","behindSL.door"],]
     },
-
     door:{
         text:"You approach the door and read the papers stapled onto it. It reads -- ''Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall)...''",
         options:[["continue reading","behindSL.continueRead"],]},
@@ -166,6 +168,7 @@ let behindSL = {
 
     attemptNOCLIP:{
         text:"You think about what the paper said and not having come in contact with anything human in forever, you believe what it says. You try imagining the feeling of falling through the floor similar to when you walked outside that fateful day. After around an hour of jumping up and down and diving onto the floor to hopefully pass through it. You begin to doubt what the paper has to say. You walk back to the table to take a seat when all of a sudden you trip over your own leg falling rapidly, face crashing towards the floor when you end up passing right through it.",
+
         options:[["Continue","behindSL.area3"]]
     },
     example:{
@@ -174,7 +177,7 @@ let behindSL = {
     },
     //---------------------------------------------------\\   
     //-------------Area 3: level 1 ----------------------\\
-    //---------------------------------------------------\\
+
 
     area3:{
         text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
@@ -249,17 +252,17 @@ function nextArea(place) { //Replaces the "moveArea" variable.
     moveArea = place;
 }
 
-//Construct function and other functions
+//Construct function and other functions.
 function behindNameConstruct(place) {
-    let message = '<p name ="playerName"></p><p class = "behindStory">'+ place.text +'</p><ul>'
-    for (i = 0; i < place.options.length; i++) {
-        message += '<button class= behindOptions type="submit" onclick="nextArea(' + place.options[i][1] + ')">' + place.options[i][0] + '</button>'
+    let message = '<p name ="playerName"></p><p class = "behindStory">'+ place.text +'</p><ul>' //Sets message variable.
+    for (i = 0; i < place.options.length; i++) { //For loop.
+        message += '<button class= behindOptions type="submit" onclick="nextArea(' + place.options[i][1] + ')">' + place.options[i][0] + '</button>' //Add buttons with += message
     }
     for (i=0; i < message.length-6; i++) {
         if (message.substring(i,i+6)=="player") {
             message = message.replace("player", behindPlayer.name);
             message +='<ul>'
-        }
+        } //Replaces behindPlayer default name to whatever the player typed and ends the unordered list.
     }
     return message;
 }
