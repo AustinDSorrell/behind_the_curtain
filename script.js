@@ -4,7 +4,7 @@ let behindPlayer = { //Player object with properties.
     name: "player",
     status: "unafflicted",
     sanity: "sane",
-    inventory: "empty",
+    inventory: "",
     choices: [],
     clothes: "none",
 };
@@ -122,10 +122,10 @@ let behindSL = {
         options:[["Inspect Room","behindSL.inspectRoom"],["Inspect Table", "behindSL.inspectTable"]]
     },
     inspectTable:{
-        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.'' On the back of the sticky note , the text reads ''CODE: 10:28''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness . Its hard to concentrate.",
+        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.'' On the back of the sticky note , the text reads ''CODE: 10:28''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness. Its hard to concentrate.",
         options:[["Inspect Room", "behindSL.inspectRoom"],]
 
-        //Make an area here that adds an additional option if they have sticky notes.
+        //Make functionality here that adds an additional option if they have sticky notes.
     },
     inspectRoom:{
         text:"You take time to analyze your current surroundings. You begin to hear abrupt, loud, knocking, coming from within the walls and sounds of various copying machines and papers shuffling can also be heard. The wallpaper is a mixture of dark brown and manilla. The lights abruptly change luminosity and sometimes darken to a pitch black, with varying sounds of loud humming from the single light source above the table. You also see a steel office door with some papers stapled to it.",
