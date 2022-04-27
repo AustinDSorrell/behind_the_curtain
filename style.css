@@ -41,19 +41,25 @@ button:hover {
 .behindName {
     color: white;
     margin-top: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 .behindStory {
-    font-size: 20px;
-    margin-left: 400px;
-    margin-right: 400px;
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .behindOptions {
-    margin-left: 362px;
+    margin-left: 41%;
+    margin-right: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    margin-top: 15px;
+    min-width: 300px;
 }
 
 

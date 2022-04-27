@@ -11,7 +11,7 @@ let behindPlayer = { //Player object with properties.
 };
 
 let behindAlarm = { //Alarm object with properties.
-    time:"10:28am",
+    time:"||10:28 AM||",
 };
 
 let lvlZeroWall ={
@@ -109,7 +109,7 @@ let behindSL = {
 
     call:{
         text:"After about an hour and a half of calling out the words ''Is anyone out there? Can anyone hear me?'' etc. You finally come to the conclusion that...YOU ARE IN COMPLETE ISOLATION.",
-        options:[["Walk Around the Building", "behindSL.walk"],["search for an exit", "behindSL.searchExit"]]},
+        options:[["Walk Around the Building", "behindSL.walk"],["Search for an Exit", "behindSL.searchExit"]]},
 
     searchExit:{
         text:"You start searching for an exit. After looking around for what feels like days stretching across motions of insanity and sickness, you come to find a room with a couple filing cabinets and a singular dark oak desk in the center. A regularly proportionate office space.",
