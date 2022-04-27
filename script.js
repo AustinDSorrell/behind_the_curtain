@@ -170,9 +170,9 @@ let behindSL = {
         text:"",
         options:[["",""],["",""]],
     },
-    //---------------------------------------------------\\   
-    //-----------------Area 3: level 1 ------------------\\
-    //---------------------------------------------------\\   
+        //---------------------------------------------------\\   
+        //-----------------Area 3: level 1 ------------------\\
+        //---------------------------------------------------\\   
 
     area3:{
         text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
@@ -208,12 +208,12 @@ let behindSL = {
         text:"",
         options:[["1",""],["",""]],
     },
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
 
 breakMachine:{
     text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
