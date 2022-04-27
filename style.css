@@ -47,13 +47,12 @@ button:hover {
 
 .behindStory {
     font-size: 22px;
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: 85%;
+    margin-left: 8%;
+    max-width: 90%;
 }
 
 .behindOptions {
-    margin-left:  8%; ;
+    margin-left: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +61,3 @@ button:hover {
     min-width: 100px;
 }
 
-ul{
-    padding-inline-start: 0;
-}

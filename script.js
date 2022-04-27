@@ -170,9 +170,9 @@ let behindSL = {
         text:"",
         options:[["",""],["",""]],
     },
-    //---------------------------------------------------\\   
-    //-----------------Area 3: level 1 ------------------\\
-    //---------------------------------------------------\\   
+        //---------------------------------------------------\\   
+        //-----------------Area 3: level 1 ------------------\\
+        //---------------------------------------------------\\   
 
     area3:{
         text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
@@ -208,12 +208,12 @@ let behindSL = {
         text:"",
         options:[["1",""],["",""]],
     },
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
-// ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
+    // ╬◘really important-----try to set up keypad please♦◘\\
 
 take:{
     text:"You take the Flashlight & Walkie Talkie. The flashlight lights up with a shine of a thousand stars and lights the path ahead of you. The walkie talkie seems functional, so you grab and push in the button of the radio and speak. -- 'Hello? Is anyone on the other side of this line? Anyone at all?' -- *PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSH* -- The wail of static bursts through the walkie talkie. Before something is heard. -- 'Yeah…hello? Did someone say something?' (you hear a voice on the other side of the line speak) -- 'Yes I did, I'm here. My name is…..…my name is………'",
