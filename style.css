@@ -47,19 +47,21 @@ button:hover {
 
 .behindStory {
     font-size: 22px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 85%;
 }
 
 .behindOptions {
-    margin-left: 41%;
-    margin-right: 60%;
+    margin-left:  8%; ;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
     margin-top: 15px;
-    min-width: 300px;
+    min-width: 100px;
 }
 
-
+ul{
+    padding-inline-start: 0;
+}
