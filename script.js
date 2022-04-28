@@ -188,11 +188,9 @@ let behindSL = {
         text:"You begin wandering the vastly open area realizing its scale after a couple of hours of walking. You seem to have found yourself inside of some sort of industrial warehouse complex. -- As you look around. -- You find a vending machine, water fountain, miniature flashlight with a clipboard placed below it, and a walkie talkie.",
         options:[["Drink from fountain","behindSL.fountain"],["Try Vending Machine","behindSL.vendingMachine"],["Take Flashlight and Walkie Talkie","behindSL.take"]],
     },
-
     fountain:{
         text:"You walk towards the fountain and place your hand over the button to dispense the water. You push in and are surprised to find out that it actually works! You pull your head down vigorously and begin drinking from the spout. -- You realize the water has a distinctly subtle sweetness that is pleasant, but isn't quite what you expected at first. -- You feel as if the large sense of dread that has been plaguing you has been lifted off your shoulders.",
         options:[["Try Vending Machine","behindSL.vendingMachine"],["",""]],
-        variable: hydration = true,
     },
     vendingMachine:{
         text:"You attempt to work the vending machine but it seems to require an employee passcode to use.",
