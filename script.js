@@ -8,6 +8,7 @@ let behindPlayer = { //Player object with properties.
     teeth: "",
     choices: [],
     clothes: "none",
+    hydration: "false"
 };
 
 let behindAlarm = { //Alarm object with properties.
@@ -16,7 +17,8 @@ let behindAlarm = { //Alarm object with properties.
 
 let lvlZeroWall ={
     status:"damaged",
-}
+};
+
 
 
 //Main Story Variable
@@ -177,6 +179,7 @@ let behindSL = {
     area3:{
         text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
         options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"],["Wander Around", "behindSL.wander"]]
+        
     },
 
     noclipAgain:{
@@ -193,6 +196,7 @@ let behindSL = {
     fountain:{
         text:"You walk towards the fountain and place your hand over the button to dispense the water. You push in and are surprised to find out that it actually works! You pull your head down vigorously and begin drinking from the spout. -- You realize the water has a distinctly subtle sweetness that is pleasant, but isn't quite what you expected at first. -- You feel as if the large sense of dread that has been plaguing you has been lifted off your shoulders.",
         options:[["Try Vending Machine","behindSL.vendingMachine"],["",""]],
+        
     },
 
     vendingMachine:{
@@ -232,8 +236,28 @@ stay:{
 
 towardScreams:{
     text:"Running towards the screams, the man that was previously here claiming to find an exit had now turned into a flap of skin over a skeleton and leftover viscera while the innards of what was the man was across the room. While this creature had no real meat on their bones, this didn't stop the previously human creature to develop claws and figure out how to use them, it was clawing at one of the walls leaving scratch marks along the concrete walls. It realizes you're here and makes a dash towards you with a bloody gleam in its eyes.",
-    options:[["",""],["",""]],
+    options:[["Rush Past","behindSL.rush"],["Fight the Being","behindSL.fight"]["Flee the Encounter","behindSL.fleeEncounter"]],
 },
+
+// rush:{
+//     text:"",
+//     options:[["",""],["",""]],
+// },
+
+// fight:{
+//     text:"",
+//     options:[["",""],["",""]],
+// },
+
+// fleeEncounter:{
+//     text:"",
+//     options:[["",""],["",""]],
+// },
+//the options above require text and options
+
+
+
+
 
 breakMachine:{
     text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
