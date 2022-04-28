@@ -4,18 +4,22 @@ let behindPlayer = { //Player object with properties.
     name: "player",
     status: "unafflicted",
     sanity: "sane",
-    inventory: "",
-    teeth: "",
+    inventory: "empty",
+    teeth: "dirty",
     choices: [],
     clothes: "none",
 };
+
+let behindFam = {
+    name: "none"
+}
 
 let behindAlarm = { //Alarm object with properties.
     time:"||10:28 AM||",
 };
 
 let lvlZeroWall ={
-    status:"damaged",
+    status:"normal",
 }
 
 
@@ -108,7 +112,7 @@ let behindSL = {
         options:[["Search for an Exit", "behindSL.searchExit"],["Call for Help", "behindSL.call"]]},
 
     call:{
-        text:"After about an hour and a half of calling out the words ' etc. You finally come to the conclusion that...YOU ARE IN COMPLETE ISOLATION.",
+        text:"After about an hour and a half of calling out the words ''Is anyone out there? Can anyone hear me?'' etc. You finally come to the conclusion that...YOU ARE IN COMPLETE ISOLATION.",
         options:[["Walk Around the Building", "behindSL.walk"],["Search for an Exit", "behindSL.searchExit"]]},
 
     searchExit:{
@@ -120,11 +124,11 @@ let behindSL = {
         options:[["Approach Desk", "behindSL.desk"]]
     },
     desk:{
-        text:"You sit down at the desk and begin to collect your thoughts. You have been standing for days at this point, and sitting on the floor never really was a choice if you wanted to keep your clothes in good condition. How long will it take to find an exit? How long will it take for you to starve? The lights are making an ear pitchingly loud noise now and you can feel your sanity beginning to dwindle.  You advert your gaze from the table after staring at it for a while due to the comfort and normalcy it gives, when you realize something. 'Was this room always this color?'.",
+        text:"You sit down at the desk and begin to collect your thoughts. You have been standing for days at this point, and sitting on the floor never really was a choice if you wanted to keep your clothes in good condition. How long will it take to find an exit? How long will it take for you to starve? The lights are making an ear pitchingly loud noise now and you can feel your sanity beginning to dwindle.  You advert your gaze from the table after staring at it for a while due to the comfort and normalcy it gives, when you realize something. ''Was this room always this color?''.",
         options:[["Inspect Room","behindSL.inspectRoom"],["Inspect Table", "behindSL.inspectTable"]]
     },
     inspectTable:{
-        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads '"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.' On the back of the sticky note , the text reads 'CODE: 10:28'. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness. Its hard to concentrate.",
+        text:"After closer inspection of the table. A sticky note written in black pen resides in the center of the table. It reads ''"+ behindPlayer.name + ", do you remember? Remember. Remember this place. Remember your room. Remember. There is no help, we must help ourselves if we wish to escape this nightmare. That is if there is one. You are the only one that will forever hear that alarm for eternity.'' On the back of the sticky note , the text reads ''CODE: 10:28''. The writing is familiar to you, but discerning the meaning and who wrote it draws blanks in your mind. It's almost as if it's being fogged by a harsh black smoke inside your consciousness. Its hard to concentrate.",
         options:[["Inspect Room", "behindSL.inspectRoom"],]
 
         //Make functionality here that adds an additional option if they have sticky notes.
@@ -134,11 +138,11 @@ let behindSL = {
         options:[["Walk to Door","behindSL.door"],]
     },
     door:{
-        text:"You approach the door and read the papers stapled onto it. It reads -- 'Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall)...'",
+        text:"You approach the door and read the papers stapled onto it. It reads -- ''Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall)...''",
         options:[["Continue Reading","behindSL.continueRead"],]},
 
     continueRead:{
-        text:"'Most people can't no-clip for more than 3-5 seconds at a time. So falling through multiple floors shouldn't be an issue (note that isn't a guarantee). If that doesn't work. Try intensely thinking about things that frighten or excite you. If you're a normal person. The knocking inside that room should already be giving you the creeps, and if you are an even more paranoid/fearful person, you'd probably considered or attempted to curl up in the fetal position to cry manically, and trying that again might work as well. -- Hallucinations are common so no shame if you think something's watching you (because something usually is) and in a matter of a few moments you'll probably find yourself falling through the floor anyway. -- When you make it to the next level. Attempt to find our base at - Fun party land :) ! Come join us ! We have cake! :D -- The remaining bits of the paper seem to have been written in crayon and a yellow-reddish fluid/liquid coating. Many unintelligible words and drawings block the remaining text which you acknowledge would've been helpful to see.",
+        text:"''Most people can't no-clip for more than 3-5 seconds at a time. So falling through multiple floors shouldn't be an issue (note that isn't a guarantee). If that doesn't work. Try intensely thinking about things that frighten or excite you. If you're a normal person. The knocking inside that room should already be giving you the creeps, and if you are an even more paranoid/fearful person, you'd probably considered or attempted to curl up in the fetal position to cry manically, and trying that again might work as well. -- Hallucinations are common so no shame if you think something's watching you (because something usually is) and in a matter of a few moments you'll probably find yourself falling through the floor anyway. -- When you make it to the next level. Attempt to find our base at - Fun party land :) ! Come join us ! We have cake! :D -- The remaining bits of the paper seem to have been written in crayon and a yellow-reddish fluid/liquid coating. Many unintelligible words and drawings block the remaining text which you acknowledge would've been helpful to see.",
         options:[["Examine Paper", "behindSL.examinePaper"],]
     },
     examinePaper:{
@@ -170,6 +174,7 @@ let behindSL = {
         text:"",
         options:[["",""],["",""]],
     },
+
         //---------------------------------------------------\\   
         //-----------------Area 3: level 1 ------------------\\
         //---------------------------------------------------\\   
@@ -181,9 +186,15 @@ let behindSL = {
 
     noclipAgain:{
         text:"You've decided enough is enough and this place was not safe in the slightest. That paper must've lied to you, and now you're in a worse position than before. You attempt to clip through the floor as you did previously. Attempting a few times to no avail. You realize all you're doing is tenderizing yourself for whatever might be making those sounds and as you turn around you spot a relatively familiar figure standing underneath a flood light.",
-        options:[["",""],["",""]],
+        options:[["Continue","famEnter"]],
+
     },
-//the option above needs a prompt added to change text later
+
+    famEnter:{
+        options:[["","Enter"]],
+    },
+
+    //the option above needs a prompt added to change text later
 
     wander:{
         text:"You begin wandering the vastly open area realizing its scale after a couple of hours of walking. You seem to have found yourself inside of some sort of industrial warehouse complex. -- As you look around. -- You find a vending machine, water fountain, miniature flashlight with a clipboard placed below it, and a walkie talkie.",
@@ -206,8 +217,9 @@ let behindSL = {
 
     keypad:{
         text:"",
-        options:[["1",""],["",""]],
+        options:[["1",""],["2",""]],
     },
+
     // ╬◘really important-----try to set up keypad please♦◘\\
     // ╬◘really important-----try to set up keypad please♦◘\\
     // ╬◘really important-----try to set up keypad please♦◘\\
@@ -215,41 +227,38 @@ let behindSL = {
     // ╬◘really important-----try to set up keypad please♦◘\\
     // ╬◘really important-----try to set up keypad please♦◘\\
 
-take:{
-    text:"You take the Flashlight & Walkie Talkie. The flashlight lights up with a shine of a thousand stars and lights the path ahead of you. The walkie talkie seems functional, so you grab and push in the button of the radio and speak. -- 'Hello? Is anyone on the other side of this line? Anyone at all?' -- *PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSH* -- The wail of static bursts through the walkie talkie. Before something is heard. -- 'Yeah…hello? Did someone say something?' (you hear a voice on the other side of the line speak) -- 'Yes I did, I'm here. My name is…..…my name is………'",
-    options:[["Remember Your Name","behindSL.name"]],
-},
+    take:{
+        text:"You take the Flashlight & Walkie Talkie. The flashlight lights up with a shine of a thousand stars and lights the path ahead of you. The walkie talkie seems functional, so you grab and push in the button of the radio and speak. -- 'Hello? Is anyone on the other side of this line? Anyone at all?' -- *PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSH* -- The wail of static bursts through the walkie talkie. Before something is heard. -- 'Yeah…hello? Did someone say something?' (you hear a voice on the other side of the line speak) -- 'Yes I did, I'm here. My name is…..…my name is………'",
+        options:[["Remember Your Name","behindSL.name"]],
+    },
 
-name:{
-    text:"'Yeah that's right...it's been so long I almost forgot. My name is (insert player name) and I'm currently stuck in this hellscape of a warehouse facility I haven't heard or seen any signs of human life in..well… so long I can't recall. The sounds and atmosphere of this place is driving me insane. I've been so isolated that I almost forgot that I even exist…who are you?' -- 'Well what an introduction this is but I can't seem to recall at all what my name is, or how I got here. And you don't sound like someone familiar but just know I'm in the same scenario as you. I found this walkie talkie next to a door that leads down into a basement. The door is coated in blood and mold, so it's best to assume I shouldn't go down there.' -- The person pauses for a moment and takes a deep breath. -- 'I found a doorway with a sign that says 'Level 2' on it. I think this is an exit but…' -- Their voices began to break as a soft sob broke out. -- '...I *cough* don't think I'll be able too… *cough cough*  make it out of here *intense distortion*.' -- After you hear those words on the other side of the radio, you realize the person on the other side had sounded coarse and dehydrated. As if they had consumed nothing but sand as replacement for liquid their entire life. -- Loud sounds of scratching and peeling are distorted through the radio microphone. Splatter sounds of what you assume is blood is also heard as squashing and squishing sounds follow it. Shredding and cracking of dry skin ripples through the radio before it cuts. *click* -- As the radio silences. You realize you hear screams exactly like what you heard on the radio, in close proximity to your location. -- If there's an exit there. The danger might be worth it. -- What do you do?",
+    name:{
+        text:"'Yeah that's right...it's been so long I almost forgot. My name is (insert player name) and I'm currently stuck in this hellscape of a warehouse facility I haven't heard or seen any signs of human life in..well… so long I can't recall. The sounds and atmosphere of this place is driving me insane. I've been so isolated that I almost forgot that I even exist…who are you?' -- 'Well what an introduction this is but I can't seem to recall at all what my name is, or how I got here. And you don't sound like someone familiar but just know I'm in the same scenario as you. I found this walkie talkie next to a door that leads down into a basement. The door is coated in blood and mold, so it's best to assume I shouldn't go down there.' -- The person pauses for a moment and takes a deep breath. -- 'I found a doorway with a sign that says 'Level 2' on it. I think this is an exit but…' -- Their voices began to break as a soft sob broke out. -- '...I *cough* don't think I'll be able too… *cough cough*  make it out of here *intense distortion*.' -- After you hear those words on the other side of the radio, you realize the person on the other side had sounded coarse and dehydrated. As if they had consumed nothing but sand as replacement for liquid their entire life. -- Loud sounds of scratching and peeling are distorted through the radio microphone. Splatter sounds of what you assume is blood is also heard as squashing and squishing sounds follow it. Shredding and cracking of dry skin ripples through the radio before it cuts. *click* -- As the radio silences. You realize you hear screams exactly like what you heard on the radio, in close proximity to your location. -- If there's an exit there. The danger might be worth it. -- What do you do?",
         options:[["Stay Where You Are","behindSL.stay"],["Go Towards the Screams","behindSL.towardScreams"]],
-},
+    },
 
-stay:{
-    text:"Standing here for a long time makes you think that there may not even be a real reason why you of all people are down here suffering through this hellscape. All this contemplation makes you thirsty and think about the water fountain.",
-    options:[["",""],["",""]],
-},
+    stay:{
+        text:"Standing here for a long time makes you think that there may not even be a real reason why you of all people are down here suffering through this hellscape. All this contemplation makes you thirsty and think about the water fountain.",
+        options:[["",""],["",""]],
+    },
 
-towardScreams:{
-    text:"Running towards the screams, the man that was previously here claiming to find an exit had now turned into a flap of skin over a skeleton and leftover viscera while the innards of what was the man was across the room. While this creature had no real meat on their bones, this didn't stop the previously human creature to develop claws and figure out how to use them, it was clawing at one of the walls leaving scratch marks along the concrete walls. It realizes you're here and makes a dash towards you with a bloody gleam in its eyes.",
-    options:[["",""],["",""]],
-},
+    towardScreams:{
+        text:"Running towards the screams, the man that was previously here claiming to find an exit had now turned into a flap of skin over a skeleton and leftover viscera while the innards of what was the man was across the room. While this creature had no real meat on their bones, this didn't stop the previously human creature to develop claws and figure out how to use them, it was clawing at one of the walls leaving scratch marks along the concrete walls. It realizes you're here and makes a dash towards you with a bloody gleam in its eyes.",
+        options:[["",""],["",""]],
+    },
+    breakMachine:{
+        text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
+        options:[["Make Your Way Down","behindSL.down"],["Continue breaking into the Machine","behindSL.continueBreakMachine"]],
+    },
 
-breakMachine:{
-    text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
-    options:[["Make Your Way Down","behindSL.down"],["Continue breaking into the Machine","behindSL.continueBreakMachine"]],
-},
-
-down:{
-    text:"You make your way down the metal staircase for what feels like ages, after several dozen steps the silence of the previous area begins to fade as it's overtaken by the hissing of pneumatic machinery. The clamping of presses and the clank of old factory machines whirr into life as you descend deeper into the depths of this staircase. Eventually you make your way to the bottom just barely beyond the factory hissing with it still audible to your ears. You scan the basement for anything of interest and find some sticky notes and a pencil. It's the perfect scenario, if someone ends up in your situation you can write notes along the walls to give tips and tricks on what to do next. This thought was cut short as the hissing from the factory was changed into the hissing of a living being, this thing was mimicking the sounds of the machine's pneumatic hissing and was doing a pretty good job. As the creature of false proportions and featureless faces (yes multiple) come closer and closer it drops into the floor just before it reaches you. Good it wasn't real, however what happened next is very real as this is a warm dark and somewhat damp from the steam in the factory this had attracted this living fungus spider creature, what was strange for this interaction was that it appeared to be a massive hive of these things with more than 40 spilling in through the doorway to the stairs. It turns out these things are incredibly infectious and ended this adventure short. -- OverRun ending",
-    options:[["Rise Again",""]]
-},
-
-continueBreakMachine:{
-    text:"You return to the vending machine really wanting those snacks for it's the only food you've seen in days. Banging on the vending machine in desperation you notice a change in color on the paint and glass going from black and clear to a smeared red. In your blind fury and hunger you kept hitting the vending machine to the point where your hands had suffered damage from attacking the food filled metal box.+Wounded Status Effect -- The sounds of you banging against the metal vending machine have attracted some monsters of the dark, you can hear them, but you can't see them. You soon realize that the sounds were created by the darkness itself as it swallows you whole and you crossfade out of existence without feeling a thing. -- You Died -- Hungering Darkness ending",
-    options:[["Rise Again",""]]},
-
-};
+    down:{
+        text:"You make your way down the metal staircase for what feels like ages, after several dozen steps the silence of the previous area begins to fade as it's overtaken by the hissing of pneumatic machinery. The clamping of presses and the clank of old factory machines whirr into life as you descend deeper into the depths of this staircase. Eventually you make your way to the bottom just barely beyond the factory hissing with it still audible to your ears. You scan the basement for anything of interest and find some sticky notes and a pencil. It's the perfect scenario, if someone ends up in your situation you can write notes along the walls to give tips and tricks on what to do next. This thought was cut short as the hissing from the factory was changed into the hissing of a living being, this thing was mimicking the sounds of the machine's pneumatic hissing and was doing a pretty good job. As the creature of false proportions and featureless faces (yes multiple) come closer and closer it drops into the floor just before it reaches you. Good it wasn't real, however what happened next is very real as this is a warm dark and somewhat damp from the steam in the factory this had attracted this living fungus spider creature, what was strange for this interaction was that it appeared to be a massive hive of these things with more than 40 spilling in through the doorway to the stairs. It turns out these things are incredibly infectious and ended this adventure short. -- OverRun ending",
+        options:[["Rise Again",""]]
+    },
+    continueBreakMachine:{
+        text:"You return to the vending machine really wanting those snacks for it's the only food you've seen in days. Banging on the vending machine in desperation you notice a change in color on the paint and glass going from black and clear to a smeared red. In your blind fury and hunger you kept hitting the vending machine to the point where your hands had suffered damage from attacking the food filled metal box.+Wounded Status Effect -- The sounds of you banging against the metal vending machine have attracted some monsters of the dark, you can hear them, but you can't see them. You soon realize that the sounds were created by the darkness itself as it swallows you whole and you crossfade out of existence without feeling a thing. -- You Died -- Hungering Darkness ending",
+        options:[["Rise Again",""]]},
+    };
 
 //Story Page
 let behindPage = document.getElementById('enterName'),
@@ -261,6 +270,7 @@ console.log(behindData);
 let moveArea = behindSL.characterConfirm;  //Sets moveArea variable as the character confirmation screen to start the loop.
 var behindBranches = ["behindSL"];
 let behindNameStored = false;
+let behindFamiliarStored = false;
 
 function nextArea(place) { //Replaces the "moveArea" variable.
     moveArea = place;
@@ -275,7 +285,7 @@ function behindNameConstruct(place) {
     for (i=0; i < message.length-6; i++) {
         if (message.substring(i,i+6)=="player") {
             message = message.replace("player", behindPlayer.name);
-            message +='<ul>'
+            message +='</ul>'
         } //Replaces behindPlayer default name to whatever the player typed and ends the unordered list.
     }
     return message;
@@ -286,13 +296,20 @@ function statusUpdate() { //Currently not in use.
     statsDiv.innerHTML = behindData;
 }
 
-function behindDataY(event) { //Function that stores player name and other data.
+function behindDataY(event) { //Function that stores player name.
     if (behindNameStored == false) {
       let behindTextStored = behindData['playerName'].value;
       let output = document.getElementById('output');
       behindPlayer.name = behindTextStored;
       behindNameStored = true;
         }
+    if (behindFamiliarStored == true) { //Stores "what figure do you see?".
+         let behindTextStored = behindData['famName'].value;
+         let output = document.getElementById('output');
+         behindFam.name = behindTextStored;
+         behindFamStored = false;
+        }
+
 
 output.innerHTML = `${behindNameConstruct(moveArea)}`; //Outputs function behindNameConstruct into inner HTML index.
 
