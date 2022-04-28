@@ -8,6 +8,7 @@ let behindPlayer = { //Player object with properties.
     teeth: "dirty",
     choices: [],
     clothes: "none",
+    hydration: "false"
 };
 
 let behindFam = {
@@ -20,8 +21,7 @@ let behindAlarm = { //Alarm object with properties.
 
 let lvlZeroWall ={
     status:"normal",
-}
-
+};
 
 //Main Story Variable
 
@@ -182,6 +182,7 @@ let behindSL = {
     area3:{
         text:"You find yourself in a dark and bone chillingly cold space with concrete flooring and very little noticeable lighting. You can hardly see 10 - 20 feet in front of you before everything fades into a darkened void with a low hanging fog covering the floor beneath your knees making it hard to discern what you're directly standing on. As your vision adjusts to the atmosphere, more of the room is revealed to you, recognizing it as a large parking lot structure with large pillars aligned in the middle of the room. Each pillar has a different but vaguely familiar design, as if feelings of nostalgia reminisce through the room and are purposely troubling you... -- While trying to recall these feelings, your attention is disrupted by the sounds of various ambient noises. From scampering, to sloshing, to crunching, to whispers of unintelligible nature. The sounds seem to be coming from unknown origins, and you think maybe it's better that way. After a few minutes of listening to the sounds paralyzed by fear, paranoia kicks in and you begin to believe you're being watched and are light headed from the lack of food and water.",
         options:[["Attempt to NOCLIP Again","behindSL.noclipAgain"],["Wander Around", "behindSL.wander"]]
+        
     },
 
     noclipAgain:{
@@ -198,12 +199,14 @@ let behindSL = {
 
     wander:{
         text:"You begin wandering the vastly open area realizing its scale after a couple of hours of walking. You seem to have found yourself inside of some sort of industrial warehouse complex. -- As you look around. -- You find a vending machine, water fountain, miniature flashlight with a clipboard placed below it, and a walkie talkie.",
-        options:[["Drink from fountain","behindSL.fountain"],["try vending machine","behindSL.vendingMachine"]],
+        options:[["Drink from fountain","behindSL.fountain"],["try vending machine","behindSL.vendingMachine"],["Take Flashlight and Walkie Talkie","behindSL.take"]],
     },
+
 
     fountain:{
         text:"You walk towards the fountain and place your hand over the button to dispense the water. You push in and are surprised to find out that it actually works! You pull your head down vigorously and begin drinking from the spout. -- You realize the water has a distinctly subtle sweetness that is pleasant, but isn't quite what you expected at first. -- You feel as if the large sense of dread that has been plaguing you has been lifted off your shoulders.",
         options:[["Try Vending Machine","behindSL.vendingMachine"],["",""]],
+        
     },
 
     vendingMachine:{
@@ -232,10 +235,49 @@ let behindSL = {
         options:[["Remember Your Name","behindSL.name"]],
     },
 
-    name:{
-        text:"'Yeah that's right...it's been so long I almost forgot. My name is (insert player name) and I'm currently stuck in this hellscape of a warehouse facility I haven't heard or seen any signs of human life in..well… so long I can't recall. The sounds and atmosphere of this place is driving me insane. I've been so isolated that I almost forgot that I even exist…who are you?' -- 'Well what an introduction this is but I can't seem to recall at all what my name is, or how I got here. And you don't sound like someone familiar but just know I'm in the same scenario as you. I found this walkie talkie next to a door that leads down into a basement. The door is coated in blood and mold, so it's best to assume I shouldn't go down there.' -- The person pauses for a moment and takes a deep breath. -- 'I found a doorway with a sign that says 'Level 2' on it. I think this is an exit but…' -- Their voices began to break as a soft sob broke out. -- '...I *cough* don't think I'll be able too… *cough cough*  make it out of here *intense distortion*.' -- After you hear those words on the other side of the radio, you realize the person on the other side had sounded coarse and dehydrated. As if they had consumed nothing but sand as replacement for liquid their entire life. -- Loud sounds of scratching and peeling are distorted through the radio microphone. Splatter sounds of what you assume is blood is also heard as squashing and squishing sounds follow it. Shredding and cracking of dry skin ripples through the radio before it cuts. *click* -- As the radio silences. You realize you hear screams exactly like what you heard on the radio, in close proximity to your location. -- If there's an exit there. The danger might be worth it. -- What do you do?",
-        options:[["Stay Where You Are","behindSL.stay"],["Go Towards the Screams","behindSL.towardScreams"]],
+    name: {
+        text:"'Yeah that's right...it's been so long I almost forgot. My name is "+ behindPlayer.name +" and I'm currently stuck in this hellscape of a warehouse facility I haven't heard or seen any signs of human life in..well… so long I can't recall. The sounds and atmosphere of this place is driving me insane. I've been so isolated that I almost forgot that I even exist…who are you?' -- 'Well what an introduction this is but I can't seem to recall at all what my name is, or how I got here. And you don't sound like someone familiar but just know I'm in the same scenario as you. I found this walkie talkie next to a door that leads down into a basement. The door is coated in blood and mold, so it's best to assume I shouldn't go down there.' -- The person pauses for a moment and takes a deep breath. -- 'I found a doorway with a sign that says 'Level 2' on it. I think this is an exit but…' -- Their voices began to break as a soft sob broke out. -- '...I *cough* don't think I'll be able too… *cough cough*  make it out of here *intense distortion*.' -- After you hear those words on the other side of the radio, you realize the person on the other side had sounded coarse and dehydrated. As if they had consumed nothing but sand as replacement for liquid their entire life. -- Loud sounds of scratching and peeling are distorted through the radio microphone. Splatter sounds of what you assume is blood is also heard as squashing and squishing sounds follow it. Shredding and cracking of dry skin ripples through the radio before it cuts. *click* -- As the radio silences. You realize you hear screams exactly like what you heard on the radio, in close proximity to your location. -- If there's an exit there. The danger might be worth it. -- What do you do?",
+            options:[["Stay Where You Are","behindSL.stay"],["Go Towards the Screams","behindSL.towardScreams"]],
     },
+
+    stay:{
+        text:"Standing here for a long time makes you think that there may not even be a real reason why you of all people are down here suffering through this hellscape. All this contemplation makes you thirsty and think about the water fountain.",
+        options:[["Drink From fountain","behindSL.fountain"],["Try Vending Machine","behindSL.vendingMachine"],["Continue walking","behindSL.continueWalking"]],
+    },
+    continueWalking:{
+        text:"",
+        options:[["",""],["",""]],
+    },
+        //I suggest figuring out dehydration methods with the fountain before writting here
+    towardScreams:{
+        text:"Running towards the screams, the man that was previously here claiming to find an exit had now turned into a flap of skin over a skeleton and leftover viscera while the innards of what was the man was across the room. While this creature had no real meat on their bones, this didn't stop the previously human creature to develop claws and figure out how to use them, it was clawing at one of the walls leaving scratch marks along the concrete walls. It realizes you're here and makes a dash towards you with a bloody gleam in its eyes.",
+        options:[["Rush Past","behindSL.rush"],["Fight the Being","behindSL.fight"]["Flee the Encounter","behindSL.fleeEncounter"]],
+    },
+
+// rush:{
+//     text:"",
+//     options:[["",""],["",""]],
+// },
+
+// fight:{
+//     text:"",
+//     options:[["",""],["",""]],
+// },
+
+// fleeEncounter:{
+//     text:"",
+//     options:[["",""],["",""]],
+// },
+//the options above require text and options
+
+
+
+
+
+breakMachine:{
+    text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
+    options:[["Make Your Way Down","behindSL.down"],["Continue breaking into the Machine","behindSL.continueBreakMachine"]],
+},
 
     stay:{
         text:"Standing here for a long time makes you think that there may not even be a real reason why you of all people are down here suffering through this hellscape. All this contemplation makes you thirsty and think about the water fountain.",
@@ -296,7 +338,7 @@ function statusUpdate() { //Currently not in use.
     statsDiv.innerHTML = behindData;
 }
 
-function behindDataY(event) { //Function that stores player name.
+function behindDataY(event) { //Function that stores player name and data.
     if (behindNameStored == false) {
       let behindTextStored = behindData['playerName'].value;
       let output = document.getElementById('output');
