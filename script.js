@@ -30,9 +30,6 @@ let behindSL = {
 
     characterConfirm: { //"place" variable.
         text: "Your name is " + behindPlayer.name + " correct?", //Text that goes with the place variable.
-        applicationCheck: [ //Prototype status check.
-            []
-        ],
         options: [ //Options that go with the place variable
             ["Correct", "behindSL.area1Open"], ["Incorrect", "behindSL"] //Format: ["Button Name", "Next Place Variable"]
         ]
@@ -161,10 +158,6 @@ let behindSL = {
         text:"You think about what the paper said and not having come in contact with anything human in forever, you believe what it says. You try imagining the feeling of falling through the floor similar to when you walked outside that fateful day. After around an hour of jumping up and down and diving onto the floor to hopefully pass through it. You begin to doubt what the paper has to say. You walk back to the table to take a seat when all of a sudden you trip over your own leg falling rapidly, face crashing towards the floor when you end up passing right through it.",
         options:[["Next","behindSL.area3"]]
     },
-    example:{
-        text:"",
-        options:[["",""],["",""]],
-    },
 
         //---------------------------------------------------\\   
         //-----------------Area 3: level 1 ------------------\\
@@ -181,9 +174,6 @@ let behindSL = {
     famEnter:{
         options:[["","Enter"]],
     },
-
-    //the option above needs a prompt added to change text later
-
     wander:{
         text:"You begin wandering the vastly open area realizing its scale after a couple of hours of walking. You seem to have found yourself inside of some sort of industrial warehouse complex. -- As you look around. -- You find a vending machine, water fountain, miniature flashlight with a clipboard placed below it, and a walkie talkie.",
         options:[["Drink from fountain","behindSL.fountain"],["Try Vending Machine","behindSL.vendingMachine"],["Take Flashlight and Walkie Talkie","behindSL.take"]],
@@ -257,7 +247,7 @@ let behindSL = {
 //the options above require text and options
 
     breakMachine:{
-        text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel, but to your surprise the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
+        text:"You attempt to shake the machine and realize it's bolted to the ground and without tools that thing is not moving. Thinking of more ideas, you wonder if you can use one of the items around you to shatter the glass. You throw the miniature flashlight at the vending machine's front panel. But to your surprise, the glass didn't even have a scuff. You rub your hand on the clear panel and recognize it as some kind of clear coated, strong, bullet-proof polycarbonate material. When you had thrown the flashlight at the vending machine, it bounced off violently and shot out into the darkness behind you. As the flashlight disappears you hear clinks of metal against metal rupturing through the whole building. You wander towards the area where the flashlight went and find a metal staircase shrouded in darkness with the flashlight nowhere in sight.",
         options:[["Make Your Way Down","behindSL.down"],["Continue breaking into the Machine","behindSL.continueBreakMachine"]],
     },
     stay:{
