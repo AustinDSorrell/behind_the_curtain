@@ -36,6 +36,7 @@ button:hover {
     cursor: pointer;
     background-color: black;
     color: white;
+    border: solid 2px white;
 }
 
 .behindName {
