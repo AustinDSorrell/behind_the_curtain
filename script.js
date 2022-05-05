@@ -2,6 +2,9 @@ function playMusic(sound){ //Audio function
         document.getElementById(sound).play(); //plays sound based on argument from function call
 };
 
+function stopAudio(sound){
+    document.getElementById(sound).pause();
+}
 bag.style.display = 'none'; //Inventory bag displayed as none until player picks up an item warranting an inventory.
 
 let behindPlayer = { //Player object with properties.
