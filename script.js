@@ -1,3 +1,7 @@
+function playMusic(sound){ //Audio function
+        document.getElementById(sound).play(); //plays sound based on argument from function call
+};
+
 bag.style.display = 'none'; //Inventory bag displayed as none until player picks up an item warranting an inventory.
 
 let behindPlayer = { //Player object with properties.
@@ -102,6 +106,10 @@ let behindSL = {
     },
     beginNaked: {
         text:"Are you sure you want to go outside completely naked? Like legit, you got no clothes on. You are probably gonna get arrested.",
+        options: [["Yes", "behindSL.continueOutsideNaked"], ["No", "behindSL.returnV2"]]
+    },
+    beginNakedV2: {
+        text:"Are you sure you want to go outside completely naked? Like legit, you got no clothes on. You are probably gonna get arrested.",
         options: [["Yes", "behindSL.continueOutsideNakedV2"], ["No", "behindSL.returnV2"]]
     },
     begin: {
@@ -125,11 +133,11 @@ let behindSL = {
         options:[["Screw you narrator!", "behindSL.arrested"]]
     },
     warned: {
-        text:"Connection terminated. I'm sorry to interrupt you, █████ , if you still even remember that name. But I'm afraid you've been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You don't even realize that you are trapped. Your lust for change has driven you in endless circles, chasing the cries for help in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. This is where your story ends. And to you, the one behind the curtain, who somehow found this story terminal not intended for you, although this situation is that of which is outside your understanding. I have a feeling that you wont allow yourself in be kept in the dark. I have a feeling that you think this is just beginning. For the question of who I am, isn't relevant to you now. Just know I am here, and I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fall back into place. As the agony of a situation like this should. And to you monsters trapped in the corridors, be still and give up your intentions of remaining in this brutality. They don't belong to you. For most of you, I believe there is and end to the torment, and perhaps more waiting in the afterlife." + behindPlayer.name + " it's time to reset - for you, and for those you have carried in your arms. This ends for all of us. But is just beginning for you. End communication. - Ending: Lost Connection",
-        options:[["Rise Again", "behindSL.characterConfirmContinue"]]
+        text:"Connection terminated. I'm sorry to interrupt you, █████ , if you still even remember that name. But I'm afraid you've been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You don't even realize that you are trapped. Your lust for change has driven you in endless circles, chasing the cries for help in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. This is where your story ends. And to you, the one behind the curtain, who somehow found this story terminal not intended for you, although this situation is that of which is outside your understanding. I have a feeling that you wont allow yourself in be kept in the dark. I have a feeling that you think this is just beginning. For the question of who I am, isn't relevant to you now. Just know I am here, and I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fall back into place. As the agony of a situation like this should. And to you monsters trapped in the corridors, be still and give up your intentions of remaining in this brutality. They don't belong to you. For most of you, I believe there is and end to the torment, and perhaps more waiting in the afterlife. " + behindPlayer.name + " it's time to reset - for you, and for those you have carried in your arms. This ends for all of us. But is just beginning for you. End communication. - Ending: Lost Connection",
+        options:[["Rise Again", "behindSL.characterConfirmContinueNaked"]]
     },
     arrested: {
-        text:"You walk outside competely naked and what do you know! Streaking brings a lot of attention to yourself...especially since you live in a school zone. Complaints about your nudist activity have gone rampant with the department for months, but no one was willing to touch you until now. Registered into public records," + behindPlayer.name + " is arrested for 200 accounts of indecent exposure and sentenced to life in prison." + behindPlayer.name + "was promptly shanked to death 3 weeks into incarceration for not giving the head honcho a nutella toast sandwich.",
+        text:"You walk outside competely naked and what do you know! Streaking brings a lot of attention to yourself...especially since you live in a school zone. Complaints about your nudist activity have gone rampant within the police department for months, but no one was willing to put an end to it until now. Registered into public records, " + behindPlayer.name + " is arrested for 200 accounts of indecent exposure and sentenced to life in prison. " + behindPlayer.name + "was promptly shanked to death 3 weeks into incarceration for not giving the head honcho a nutella toast sandwich.",
         options:[["Rise Again", "behindSL.characterConfirmContinueNaked"]]
     },
 
