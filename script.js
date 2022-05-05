@@ -34,10 +34,17 @@ let behindSL = {
         ]
     },
 
-    characterConfirmContinue: { //"place" variable.
+    characterConfirmContinue: {
         text: "Do you want to continue with the name " + behindPlayer.name + "?", 
-        options: [ //Options that go with the place variable
+        options: [
             ["Yes", "behindSL.area1Open"], ["No", "behindSL"]
+        ]
+    },
+
+    characterConfirmContinueNaked: {
+        text: "Do you want to continue with the name " + behindPlayer.name + "?", 
+        options: [
+            ["Yes", "behindSL.area1OpenNaked"], ["No", "behindSL"]
         ]
     },
 
@@ -49,12 +56,16 @@ let behindSL = {
         text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
         options: [["Get Up","behindSL.getUp"], ["Skip Work", "behindSL.skipWork"], ["Fall Asleep", "behindSL.fallAsleep"]],
     },
+    area1OpenNaked: {
+        text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
+        options: [["Get Up","behindSL.getUpNaked"], ["Skip Work", "behindSL.skipWork"], ["Fall Asleep", "behindSL.fallAsleep"]],
+    },
     skipWork:{ 
-        text:"After around 3 minutes of not so considerate consideration. You decide to call in sick for work. You complained to your boss about ''rampant back pain'' and he sighs as the phone clicks and following dial tone is heard. He hung up.",
+        text:"After 3 minutes of not so considerate consideration, you decide to call in sick for work. You complained to your boss about ''rampant back pain'' and he sighs as the phone clicks and following dial tone is heard. He hung up.",
         options: [["Watch TV","behindSL.watchTV"], ["Party Time!", "behindSL.lvlFun"], ["Take a Nap", "behindSL.fallAsleep"]]
     },
     watchTV:{
-        text: "After the delightlful conversation with you employer, you decide to kick back on the couch and grab the remote.",
+        text: "After that delightlful conversation with you employer. You decide to kick back on the couch and turn on the TV.",
         options: [["Use Remote", "behindSL.remoteUse"]]
     },
     fallAsleep:{
@@ -62,7 +73,7 @@ let behindSL = {
         options:[["Look Through Window", "behindSL.lookOutWindow"], ["Scream For Help", "behindSL.scream"]]
     },
     lookOutWindow:{
-        text: "You notice an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. The horrifying sight ripples fear throughout your entire soul. As the creature begins to become more...identifyable. The window shatters with an abrupt force. The creature begins laughing demonically, as if its purpose is to taunt you as you feel your feet being lifted off the ground and your throat begins to tighten. Demonic laughter in varying pitches echoes throughout all while the darkness begins to cloud more and more. You're weeps for help and gasps for air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is the creature's demonic laugh that came straight from hell itself.. Ending - Tormented",
+        text: "You notice an abyss black void outside with no signs of light or life. A monstrous hallucinogenic entity with a mischievous smile fades in and appears in the window amidst the darkness. The horrifying sight ripples fear throughout your entire soul. As the creature begins to become more...identifiable. The window shatters with an abrupt force. The creature begins laughing demonically, as if its purpose is to taunt you as you feel your feet being lifted off the ground and your throat begins to tighten. Demonic laughter in varying pitches echoes throughout all while the darkness begins to cloud more and more. You're weeps for help and gasps for air are futile, and as you feel your brain's last few moments of cogniztion fade. The only thing you could possibly think of in your last moments is the creature's demonic laugh that came straight from hell itself.. Ending - Tormented",
         options:[["Rise Again", "behindSL.characterConfirmContinue"]]
     },
     scream:{
@@ -77,29 +88,49 @@ let behindSL = {
         text: "You get up begrudgingly, and waddle over to the center of your room. It's time to start your day.",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Begin the Day", "behindSL.begin"]]
     },
+    getUpNaked: { 
+        text: "You get up begrudgingly, and waddle over to the center of your room. It's time to start your day.",
+        options:[["Shower", "behindSL.showerNaked"], ["Dress for Work", "behindSL.dress"], ["Begin the Day", "behindSL.begin"]]
+    },
     shower: { 
-        text: "You strip and hop in the shower. In and out like lightning, you take most of your time staring at your figure in the mirror and commiting acts of terrorism on your body with unnatural beauty chemicals. ''I couldn't look better!''",
+        text: "You strip and hop in the shower. In and out like lightning, you take most of your time staring at your figure in the mirror and commiting acts of domestic terrorism on your body with unnatural beauty chemicals. ''I couldn't look better!''",
         options:[["Dress for Work", "behindSL.dressAfterShower"], ["Begin the Day", "behindSL.beginNaked"]]
+    },
+    showerNaked: { 
+        text: "You strip and hop in the shower. In and out like lightning, you take most of your time staring at your figure in the mirror and commiting acts of terrorism on your body with unnatural beauty chemicals. ''I couldn't look better!''",
+        options:[["Dress for Work", "behindSL.dressAfterShower"], ["Begin the Day", "behindSL.beginNakedV2"]]
     },
     beginNaked: {
         text:"Are you sure you want to go outside completely naked? Like legit, you got no clothes on. You are probably gonna get arrested.",
-        options: [["Yes", "behindSL.continueOutsideNaked"], ["No", "behindSL.return"]]
+        options: [["Yes", "behindSL.continueOutsideNakedV2"], ["No", "behindSL.returnV2"]]
     },
     begin: {
         text:"Are you sure you want to go outside?",
-        options: [["Yes", "behindSL.continueOutside"], ["No", "behindSL.return"]]
+        options: [["Yes", "behindSL.continueOutside"], ["No", "behindSL.returnV2"]]
     },
     return:{
-        text:"You walk back inside. How could you ever forgot the most important steps of the morning!?",
+        text:"You walk back inside. That was a close one! How could you ever forgot the most important steps of the morning!?",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Sike! Go back outside.", "behindSL.continueOutside"]]
+    },
+    returnV2:{
+        text:"You walk back inside. That was a close one! How could you ever forgot the most important steps of the morning!?",
+        options:[["Dress for Work", "behindSL.dress"], ["Sike! Go back outside.", "behindSL.continueOutside"]]
     },
     continueOutsideNaked: {
         text:"I'm warning you! This is not a good idea! " + behindPlayer.name + " are you some kind of sick creep?",
         options:[["Screw you narrator!", "behindSL.warned"]]
     },
+    continueOutsideNakedV2: {
+        text:"I'm warning you! This is not a good idea! " + behindPlayer.name + " are you some kind of sick creep?",
+        options:[["Screw you narrator!", "behindSL.arrested"]]
+    },
     warned: {
-        text:"Connection terminated. I'm sorry to interrupt you, █████ , if you still even remember that name, But I'm afraid you've been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You don't even realize that you are trapped. Your lust for change has driven you in endless circles, chasing the cries for help in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. This is where your story ends. And to you, the one behind the curtain, who somehow found this story terminal not intended for you, although this situation is that of which is outside your understanding. I have a feeling that you wont allow yourself in be kept in the dark. I have a feeling that you think this is just beginning. For the question of who I am, isn't relevant to you now. Just know I am here, and I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fall back into place. As the agony of a situation like this should. And to you monsters trapped in the corridors, be still and give up your intentions of remaining in this brutality. They don't belong to you. For most of you, I believe there is and end to the torment, and perhaps more waiting in the afterlife." + behindPlayer.name + " it's time to reset - for you, and for those you have carried in your arms. This ends for all of us. But is just beginning for you. End communication. - Ending: Lost Connection",
-        options:[["Continue", "behindSL.characterConfirmContinue"]]
+        text:"Connection terminated. I'm sorry to interrupt you, █████ , if you still even remember that name. But I'm afraid you've been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You don't even realize that you are trapped. Your lust for change has driven you in endless circles, chasing the cries for help in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. This is where your story ends. And to you, the one behind the curtain, who somehow found this story terminal not intended for you, although this situation is that of which is outside your understanding. I have a feeling that you wont allow yourself in be kept in the dark. I have a feeling that you think this is just beginning. For the question of who I am, isn't relevant to you now. Just know I am here, and I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fall back into place. As the agony of a situation like this should. And to you monsters trapped in the corridors, be still and give up your intentions of remaining in this brutality. They don't belong to you. For most of you, I believe there is and end to the torment, and perhaps more waiting in the afterlife." + behindPlayer.name + " it's time to reset - for you, and for those you have carried in your arms. This ends for all of us. But is just beginning for you. End communication. - Ending: Lost Connection",
+        options:[["Rise Again", "behindSL.characterConfirmContinue"]]
+    },
+    arrested: {
+        text:"You walk outside competely naked and what do you know! Streaking brings a lot of attention to yourself...especially since you live in a school zone. Complaints about your nudist activity have gone rampant with the department for months, but no one was willing to touch you until now. Registered into public records," + behindPlayer.name + " is arrested for 200 accounts of indecent exposure and sentenced to life in prison." + behindPlayer.name + "was promptly shanked to death 3 weeks into incarceration for not giving the head honcho a nutella toast sandwich.",
+        options:[["Rise Again", "behindSL.characterConfirmContinueNaked"]]
     },
 
         //----------------------------------------\\
@@ -111,9 +142,8 @@ let behindSL = {
         options:[["Continue", "behindSL.level0intro"]]
     },
     level0intro: {
-        text: "You wake up in a room with the stink of old moist carpet and your face rug burned and wet from a somewhat uncomfortable sleeping position on an unfinished wet carpet floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
+        text: "You wake up in a room with the stink of old moist carpet and your face rug burned and wet from a somewhat uncomfortable sleeping position on the floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion, with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
         options:[["Walk around the Building","behindSL.walk"],["Call out for Help", "behindSL.call"],["Search for an Exit", "behindSL.searchExit"]]
-
     },
     walk:{
         text:"You walk around and explore the general area. You pick random areas to follow, take some turns that lead to a dead-end, and find a corridor that looks like it goes straight for miles. You begin to notice that the lights sound significantly louder than before.",
@@ -223,24 +253,14 @@ let behindSL = {
     keypadRandom:{
         text:"The keypad displays ||INVALID EMPLOYEE NUMBER||. Maybe that wasnt a good idea...",
     },
-
-    // ╬◘really important-----try to set up keypad please♦◘\\
-    // ╬◘really important-----try to set up keypad please♦◘\\
-    // ╬◘really important-----try to set up keypad please♦◘\\
-    // ╬◘really important-----try to set up keypad please♦◘\\
-    // ╬◘really important-----try to set up keypad please♦◘\\
-    // ╬◘really important-----try to set up keypad please♦◘\\
-
     take:{
         text:"You take the Flashlight & Walkie Talkie. The flashlight lights up with a shine of a thousand stars and lights the path ahead of you. The walkie talkie seems functional, so you grab and push in the button of the radio and speak. -- 'Hello? Is anyone on the other side of this line? Anyone at all?' -- *PSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSH* -- The wail of static bursts through the walkie talkie. Before something is heard. -- 'Yeah…hello? Did someone say something?' (you hear a voice on the other side of the line speak) -- 'Yes I did, I'm here. My name is…..…my name is………'",
         options:[["Remember Your Name","behindSL.name"]],
     },
-
     name: {
         text:"'Yeah that's right...it's been so long I almost forgot. My name is "+ behindPlayer.name +" and I'm currently stuck in this hellscape of a warehouse facility. I haven't heard or seen any signs of human life in..well… so long I can't recall. The sounds and atmosphere of this place is driving me insane. I've been so isolated that I almost forgot that I even exist…who are you?' -- 'Well what an introduction this is but I can't seem to recall at all what my name is, or how I got here. And you don't sound like someone familiar but just know I'm in the same scenario as you. I found this walkie talkie next to a door that leads down into a basement. The door is coated in blood and mold, so it's best to assume I shouldn't go down there.' -- The person pauses for a moment and takes a deep breath. -- 'I found a doorway with a sign that says 'Level 2' on it. I think this is an exit but…' -- Their voices began to break as a soft sob broke out. -- '...I *cough* don't think I'll be able too… *cough cough*  make it out of here *intense distortion*.' -- After you hear those words on the other side of the radio, you realize the person on the other side had sounded coarse and dehydrated. As if they had consumed nothing but sand as replacement for liquid their entire life. -- Loud sounds of scratching and peeling are distorted through the radio microphone. Splatter sounds of what you assume is blood is also heard as squashing and squishing sounds follow it. Shredding and cracking of dry skin ripples through the radio before it cuts. *click* -- As the radio silences. You realize you hear screams exactly like what you heard on the radio, in close proximity to your location. -- If there's an exit there. The danger might be worth it. -- What do you do?",
             options:[["Stay Where You Are","behindSL.stay"],["Go Towards the Screams","behindSL.towardScreams"]],
     },
-
     stay:{
         text:"Standing here for a long time makes you think that there may not even be a real reason why you of all people are down here suffering through this hellscape. All this contemplation makes you thirsty and think about the water fountain.",
         options:[["Drink From fountain","behindSL.fountain"],["Try Vending Machine","behindSL.vendingMachine"],["Continue walking","behindSL.continueWalking"]],
