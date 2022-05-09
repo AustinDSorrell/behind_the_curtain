@@ -125,7 +125,7 @@ let behindSL = {
         options:[["Continue","behindSL.afterDress"]]
     },
     dressAfterShower: {
-        text: "You walk over to your wardrobe and choose to go with a classic business casual outfit now feelings squeaky clean!",
+        text: "You walk over to your wardrobe and choose to go with a classic business casual outfit now feeling squeaky clean!",
         options:[["Continue","behindSL.afterDress"]]
     },
     dressNewClothes: {
@@ -189,7 +189,7 @@ let behindSL = {
         options:[["Rise Again", "behindSL.characterConfirmContinueNaked"]]
     },
     arrested: {
-        text:"You walk outside competely naked and what do you know! Streaking brings a lot of attention to yourself...especially since you live in a school zone. Complaints about your nudist activity have gone rampant within the police department for months, but no one was willing to put an end to it until now. Registered into public records, " + behindPlayer.name + " is arrested for 200 accounts of indecent exposure and sentenced to life in prison. " + behindPlayer.name + "was promptly shanked to death 3 weeks into incarceration for not giving the head honcho a nutella toast sandwich.",
+        text:"You walk outside competely naked and what do you know! Streaking brings a lot of attention to yourself...especially since you live in a school zone. Complaints about your nudist activity have gone rampant within the police department for months, but no one was willing to put an end to it until now. Registered into public records, " + behindPlayer.name + " is arrested for 200 accounts of indecent exposure and sentenced to life in prison. " + behindPlayer.name + " was promptly shanked to death 3 weeks into incarceration for not giving the head honcho a nutella toast sandwich.",
         options:[["Rise Again", "behindSL.characterConfirmContinueNaked"]]
     },
 
