@@ -13,10 +13,7 @@ let behindPlayer = { //Player object with properties.
     sanity: "sane",
     inventory: "empty",
     choices: [],
-    clothes: "none",
 };
-
-let hydration = false
 
 let behindFam = {
     name: "none"
@@ -65,15 +62,19 @@ let behindSL = {
     },
     area1OpenNaked: {
         text: "You are awoken to the sound of a loud, blaring alarm beside your bed. As your eyes adjust from slumber, you roll over and smack the top of the alarm silencing it. The time reads " + behindAlarm.time + " in bright red digital lettering before it dims slighlty as bright morning light shines through the curtains glistening into your bedroom...",
-        options: [["Get Up","behindSL.getUpNaked"], ["Skip Work", "behindSL.skipWork"], ["Fall Asleep", "behindSL.fallAsleep"]],
+        options: [["Get Up","behindSL.getUpNaked"], ["Skip Work", "behindSL.skipWork"], ["Fall Asleep", "behindSL.fallAsleep"]]
     },
     skipWork:{ 
         text:"After 3 minutes of not so considerate consideration, you decide to call in sick for work. You complained to your boss about ''rampant back pain'' and he sighs as the phone clicks and following dial tone is heard. He hung up.",
-        options: [["Watch TV","behindSL.watchTV"], ["Party Time!", "behindSL.lvlFun"], ["Take a Nap", "behindSL.fallAsleep"]]
+        options: [["Watch TV","behindSL.watchTV"], ["Take a Nap", "behindSL.fallAsleep"]]
     },
     watchTV:{
         text: "After that delightlful conversation with you employer. You decide to kick back on the couch and turn on the TV.",
         options: [["Use Remote", "behindSL.remoteUse"]]
+    },
+    remoteUse:{
+        text: "You click the power button on the remote and the TV lights up and dies in a split second...you realize you need to pay the power bill. They must've turned it off a few moments ago since you were able to call your boss. What do you do?",
+        options: [["Get Ready For Work", "behindSL.getUpSlacker"],["Sleep it Off","behindSL.fallAsleep"]]
     },
     fallAsleep:{
         text: "You decide to fall back asleep. Why bother going outside anyway? You're much safer inside your home than anywhere else. You close your eyes and sleep. When you awake, you find that your rooms atmosphere is incredibly unsettling and uncomfortably dark. You flip on the side of your lamp and attempt to turn it on. It flickers but dies in a matter of seconds, as if the light itself is being consumed by the abyss. You begin to survey your now void like surroundings attentively. But are startled by a sudden and obnoxiously loud banging on the otherside of your bedroom window. Why someone would be knocking on your window this late at night is unknown, but is concerning none the less.",
@@ -93,6 +94,10 @@ let behindSL = {
     },
     getUp: { 
         text: "You get up begrudgingly, and waddle over to the center of your room. It's time to start your day.",
+        options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Begin the Day", "behindSL.beginPJ"]]
+    },
+    getUpSlacker: { 
+        text: "You get up begrudgingly, and waddle over to the center of your room. I guess I will have to work if I want these bills paid.",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Begin the Day", "behindSL.begin"]]
     },
     getUpNaked: { 
@@ -100,12 +105,36 @@ let behindSL = {
         options:[["Shower", "behindSL.showerNaked"], ["Dress for Work", "behindSL.dress"], ["Begin the Day", "behindSL.begin"]]
     },
     shower: { 
-        text: "You strip and hop in the shower. In and out like lightning, you take most of your time staring at your figure in the mirror and commiting acts of domestic terrorism on your body with unnatural beauty chemicals. ''I couldn't look better!''",
+        text: "You strip and hop in the shower. In and out like lightning, you take most of your time staring at your figure in the mirror and drowning your skin with unnatural beauty chemicals exclaiming: ''I couldn't look better!''",
         options:[["Dress for Work", "behindSL.dressAfterShower"], ["Begin the Day", "behindSL.beginNaked"]]
     },
     showerNaked: { 
         text: "You strip and hop in the shower. In and out like lightning, you take most of your time staring at your figure in the mirror and commiting acts of terrorism on your body with unnatural beauty chemicals. ''I couldn't look better!''",
         options:[["Dress for Work", "behindSL.dressAfterShower"], ["Begin the Day", "behindSL.beginNakedV2"]]
+    },
+    showerClothes: {
+        text: "You hop into the shower with your clothes on. For some reason you thought that it'd be a good idea...but now you're soaking wet and realize your outfit is ruined.",
+        options:[["Remove Clothes", "behindSL.removeClothes"], ["Begin the Day", "behindSL.beginWet"]]
+    },
+    removeClothes: {
+        text:"You remove your wet clothes. Now you're just sad and cold.",
+        options:[["Grab a Different Outift", "behindSL.dressNewClothes"], ["Begin the Day", "behindSL.beginNakedV3"]]
+    },
+    dress: {
+        text: "You walk over to your wardrobe and choose to go with a classic business casual outfit.",
+        options:[["Continue","behindSL.afterDress"]]
+    },
+    dressAfterShower: {
+        text: "You walk over to your wardrobe and choose to go with a classic business casual outfit now feelings squeaky clean!",
+        options:[["Continue","behindSL.afterDress"]]
+    },
+    dressNewClothes: {
+        text: "You grab a different pair of clothes and put them on. On the bright side! At least you wont need to shower now.",
+        options: [["FINALLY Leave the House", "behindSL.continueOutside"]]
+    },
+    afterDress: { 
+        text: "Now dressed appropriately, you decide what to do next.",
+        options:[["Shower", "behindSL.showerClothes"], ["Begin the Day", "behindSL.beginNakedV2"]]
     },
     beginNaked: {
         text:"Are you sure you want to go outside completely naked? Like legit, you got no clothes on. You are probably gonna get arrested.",
@@ -115,17 +144,37 @@ let behindSL = {
         text:"Are you sure you want to go outside completely naked? Like legit, you got no clothes on. You are probably gonna get arrested.",
         options: [["Yes", "behindSL.continueOutsideNakedV2"], ["No", "behindSL.returnV2"]]
     },
+    beginNakedV3: {
+        text:"Are you sure you want to go outside completely naked? Like legit, you got no clothes on. You are probably gonna get arrested.",
+        options: [["Yes", "behindSL.continueOutsideNakedV2"], ["No", "behindSL.returnV2A"]]
+    },
     begin: {
         text:"Are you sure you want to go outside?",
-        options: [["Yes", "behindSL.continueOutside"], ["No", "behindSL.returnV2"]]
+        options: [["Yes", "behindSL.continueOutside"], ["No", "behindSL.return"]]
+    },
+    beginPJ: {
+        text:"Silly you! You're still in your pajamas!",
+        options: [["Go Back Inside", "behindSL.return"]]
+    },
+    beginWet: {
+        text:"Are you sure you want to go outside with your clothes in this condition?",
+        options: [["Yes", "behindSL.continueWetOutside"], ["No", "behindSL.returnV3"]]
     },
     return:{
         text:"You walk back inside. That was a close one! How could you ever forgot the most important steps of the morning!?",
         options:[["Shower", "behindSL.shower"], ["Dress for Work", "behindSL.dress"], ["Sike! Go back outside.", "behindSL.continueOutside"]]
     },
     returnV2:{
-        text:"You walk back inside. That was a close one! How could you ever forgot the most important steps of the morning!?",
-        options:[["Dress for Work", "behindSL.dress"], ["Sike! Go back outside.", "behindSL.continueOutside"]]
+        text:"You walk back inside. That was a close one! You almost flashed the entire neighborhood!",
+        options:[["Dress for Work", "behindSL.dress"], ["Sike! Go back outside.", "behindSL.continueOutsideNakedV2"]]
+    },
+    returnV3:{
+        text:"You walk back inside. Maybe wearing soaken wet clothes outside isnt a good idea. You could get a cold!",
+        options:[["Remove Clothes", "behindSL.removeClothes"], ["Sike! Go back outside.", "behindSL.beginWet"]]
+    },
+    returnV2A:{
+        text:"You walk back inside. That was a close one! You almost flashed the entire neighborhood!",
+        options:[["Dress for Work", "behindSL.dressNewClothes"], ["Sike! Go back outside.", "behindSL.continueOutsideNakedV2"]]
     },
     continueOutsideNaked: {
         text:"I'm warning you! This is not a good idea! " + behindPlayer.name + " are you some kind of sick creep?",
@@ -152,13 +201,21 @@ let behindSL = {
         text:"You approach the front door and step outside. You attempt to plant your feet on the patio but end up falling straight through it. After falling into what seemed to be warped space, your mind collapes from the confusion and you eventually pass out mid flight...",
         options:[["Continue", "behindSL.level0intro"]]
     },
+    continueOutsideWet: {
+        text:"You approach the front door and step outside. You attempt to plant your feet on the patio but end up falling straight through it. After falling into what seemed to be warped space, your mind collapes from the confusion and you eventually pass out mid flight...",
+        options:[["Continue", "behindSL.level0introWet"]]
+    },
     level0intro: {
         text: "You wake up in a room with the stink of old moist carpet and your face rug burned and wet from a somewhat uncomfortable sleeping position on the floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion, with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core.",
         options:[["Walk around the Building","behindSL.walk"],["Call out for Help", "behindSL.call"],["Search for an Exit", "behindSL.searchExit"]]
     },
+    level0introWet: {
+        text: "You wake up in a room with the stink of old moist carpet and your face rug burned and wet from a somewhat uncomfortable sleeping position on the floor. Mono-yellow wallpaper aligns the walls in an inconsistent but endless fashion, with the background noise of fluorescent lights buzzing manically. There are a series of segmented empty rooms with long hallways and random walls breaking up the monotony reminiscing that of an abandoned backroom office space. The place feels lifeless and bleakly desolate to its core. You are also incredibly cold thanks to your shower clothes.",
+        options:[["Walk around the Building","behindSL.walk"],["Call out for Help", "behindSL.call"],["Search for an Exit", "behindSL.searchExit"]]
+    },
     walk:{
         text:"You walk around and explore the general area. You pick random areas to follow, take some turns that lead to a dead-end, and find a corridor that looks like it goes straight for miles. You begin to notice that the lights sound significantly louder than before.",
-        options:[["Continue Down Hallway","behindSL.hallWayOption"], ["Damage a random wall", "behindSL.damage"]]
+        options:[["Continue Down Hallway","behindSL.hallWayOption"], ["Damage a Random Wall", "behindSL.damage"]]
     },
 
         //Make the savable option of damaging the wall.
@@ -193,8 +250,8 @@ let behindSL = {
     },
     door:{
         text:"You approach the door and read the papers stapled onto it. It reads -- ''Hello fellow wanderer, you aren't alone. Not for long anyway. Well maybe for long, depending on how many attempts it takes for you to figure out the correct method for descending. -- In order to reach others like yourself, you'll need to no-clip through the floor, wall, or other bounds-constructive objects in the current level you find yourself on. How do you no-clip you ask? We don't know. It is a completely different method from person to person. Some people need to feel intense fear in order to accomplish it, while others simply just need a creative imagination and strong will. I'd start off with the latter. Focus on feeling your mass turn nonexistent as you fall directly through the floor with no means of stopping (similar to a ghost flying through a wall)...''",
-        options:[["Continue Reading","behindSL.continueRead"],]},
-
+        options:[["Continue Reading","behindSL.continueRead"],]
+    },
     continueRead:{
         text:"''Most people can't no-clip for more than 3-5 seconds at a time. So falling through multiple floors shouldn't be an issue (note that isn't a guarantee). If that doesn't work. Try intensely thinking about things that frighten or excite you. If you're a normal person. The knocking inside that room should already be giving you the creeps, and if you are an even more paranoid/fearful person, you'd probably considered or attempted to curl up in the fetal position to cry manically, and trying that again might work as well. -- Hallucinations are common so no shame if you think something's watching you (because something usually is) and in a matter of a few moments you'll probably find yourself falling through the floor anyway. -- When you make it to the next level. Attempt to find our base at - Fun party land :) ! Come join us ! We have cake! :D -- The remaining bits of the paper seem to have been written in crayon and a yellow-reddish fluid/liquid coating. Many unintelligible words and drawings block the remaining text which you acknowledge would've been helpful to see.",
         options:[["Examine Paper", "behindSL.examinePaper"],]
